@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import { Phone, Truck, Clock, Shield, ChevronRight, MapPin, Star, Recycle, Mail, PhoneCall, ArrowRight, CheckCircle2, Leaf, PoundSterling } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Phone, Truck, Clock, Shield, ChevronRight, MapPin, Star, Recycle, Mail, PhoneCall, ArrowRight, CheckCircle2, Leaf, PoundSterling, ChevronDown } from 'lucide-react';
 
 const skipSizes = [
   {
@@ -113,6 +113,26 @@ function useScrollReveal() {
   return ref;
 }
 
+function FaqItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="glass rounded-2xl overflow-hidden">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors"
+      >
+        <span className="font-semibold text-sm md:text-base pr-4">{question}</span>
+        <ChevronDown className={`w-5 h-5 text-brand-400 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {open && (
+        <div className="px-6 pb-5">
+          <p className="text-gray-400 text-sm leading-relaxed">{answer}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function App() {
   const mainRef = useScrollReveal();
 
@@ -173,13 +193,13 @@ function App() {
 
               {/* Headline */}
               <h1 className="animate-slide-up-delayed text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-6" style={{ opacity: 0 }}>
-                Skip Hire
+                Cheap Skip Hire in
                 <br />
-                <span className="gradient-text">Done Right.</span>
+                <span className="gradient-text">Long Eaton, Derbyshire</span>
               </h1>
 
               <p className="animate-slide-up-delayed-2 text-lg md:text-xl text-gray-400 mb-10 max-w-lg leading-relaxed" style={{ opacity: 0 }}>
-                Fast, affordable, and eco-friendly skip hire in Long Eaton and surrounding areas. From garden waste to full renovations.
+                Affordable skip hire in Long Eaton from just £150. Mini to maxi skips with same day delivery. Local, licensed, and trusted for waste removal across NG10 and surrounding areas.
               </p>
 
               {/* CTA buttons */}
@@ -264,7 +284,7 @@ function App() {
           <div className="reveal text-center mb-16">
             <span className="inline-block text-sm font-semibold text-brand-400 tracking-widest uppercase mb-4">Why Choose Us</span>
             <h2 className="text-3xl md:text-5xl font-black text-balance">
-              Not your average <span className="gradient-text">skip hire</span>
+              Why Choose <span className="gradient-text">Long Eaton Skips</span>
             </h2>
           </div>
 
@@ -325,9 +345,9 @@ function App() {
           <div className="reveal text-center mb-16">
             <span className="inline-block text-sm font-semibold text-brand-400 tracking-widest uppercase mb-4">Our Range</span>
             <h2 className="text-3xl md:text-5xl font-black mb-4">
-              Find your <span className="gradient-text">perfect skip</span>
+              Skip Hire Sizes & Prices in <span className="gradient-text">Long Eaton</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-xl mx-auto">From small clearouts to major construction projects</p>
+            <p className="text-gray-400 text-lg max-w-xl mx-auto">From mini skip hire for small clearouts to builders skips for major construction projects. Compare skip hire prices below.</p>
           </div>
 
           <div className="stagger-children grid md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -456,9 +476,9 @@ function App() {
           <div className="reveal text-center mb-16">
             <span className="inline-block text-sm font-semibold text-brand-400 tracking-widest uppercase mb-4">Coverage</span>
             <h2 className="text-3xl md:text-5xl font-black mb-4">
-              Areas we <span className="gradient-text">cover</span>
+              Skip Hire Near You — <span className="gradient-text">Areas We Cover</span>
             </h2>
-            <p className="text-gray-400 text-lg">Serving Long Eaton and the surrounding Derbyshire & Nottinghamshire areas</p>
+            <p className="text-gray-400 text-lg">Local skip hire serving Long Eaton and the surrounding Derbyshire & Nottinghamshire areas. Skip delivery across NG10 and beyond.</p>
           </div>
 
           {/* Scrolling marquee */}
@@ -524,6 +544,57 @@ function App() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-3xl mx-auto">
+          <div className="reveal text-center mb-16">
+            <span className="inline-block text-sm font-semibold text-brand-400 tracking-widest uppercase mb-4">FAQs</span>
+            <h2 className="text-3xl md:text-5xl font-black">
+              Skip Hire <span className="gradient-text">Questions Answered</span>
+            </h2>
+          </div>
+
+          <div className="stagger-children space-y-3">
+            {[
+              {
+                q: 'How much does it cost to hire a skip in Long Eaton?',
+                a: 'Skip hire prices in Long Eaton start from around £150 for a 4 yard mini skip. A 6 yard midi skip costs from £200, an 8 yard builders skip from £250, and a 12 yard maxi skip from £350. Prices may vary depending on waste type, hire duration, and location. Contact us for a free, no-obligation quote.',
+              },
+              {
+                q: 'What is the cheapest way to get rid of rubbish in the UK?',
+                a: 'Hiring a skip is often the cheapest way to dispose of large amounts of rubbish. A mini skip from £150 can hold 30–40 bin bags worth of waste. You can also save money by separating recyclable materials, sharing a skip with a neighbour, or booking ahead for the best rates. For small amounts, your local tip is free.',
+              },
+              {
+                q: 'How to save money on skip hire?',
+                a: 'To save money on skip hire: choose the right size skip to avoid paying for space you don\'t need, separate recyclable waste, avoid putting prohibited items in the skip, don\'t overfill it, consider sharing with a neighbour, and book in advance. Placing the skip on your driveway also saves on council permit costs.',
+              },
+              {
+                q: 'What can you not put in a skip?',
+                a: 'You cannot put hazardous materials in a skip including asbestos, batteries, gas cylinders, electrical equipment, tyres, paint, solvents, clinical waste, and plasterboard mixed with other waste. If you\'re unsure about a particular item, give us a call and we\'ll advise you on the best way to dispose of it.',
+              },
+              {
+                q: 'Do I need a permit for a skip on my driveway?',
+                a: 'No, you do not need a permit if the skip is placed on your private driveway or land. A council permit is only required if the skip needs to be placed on a public road or pavement. We can arrange the permit for you if needed — just let us know when you book.',
+              },
+              {
+                q: 'Can you deliver a skip the same day?',
+                a: 'Yes! Long Eaton Skips offers same day skip delivery across Long Eaton and surrounding areas, subject to availability. We also offer next day delivery as standard. Call us before midday for the best chance of same day delivery.',
+              },
+              {
+                q: 'What is the best size skip to hire?',
+                a: 'The most popular skip size is the 6 yard midi skip, which holds 50–60 bin bags and suits most household projects like kitchen or bathroom renovations. For small clearouts, a 4 yard mini skip is ideal. For larger jobs like house clearances or construction work, an 8 or 12 yard skip is recommended.',
+              },
+              {
+                q: 'Is it cheaper to use a skip or a skip bag?',
+                a: 'For larger amounts of waste, a skip is almost always cheaper than skip bags. Skip bags typically hold around 1 cubic yard and cost £30–£50 each, while a 4 yard mini skip from £150 holds the equivalent of 30–40 bin bags. If you have more than a few bags of waste, a skip offers much better value for money.',
+              },
+            ].map((faq) => (
+              <FaqItem key={faq.q} question={faq.q} answer={faq.a} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0">
@@ -533,10 +604,10 @@ function App() {
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <div className="reveal">
             <h2 className="text-4xl md:text-6xl font-black mb-6">
-              Ready to <span className="gradient-text">get started?</span>
+              Book Your <span className="gradient-text">Skip Today</span>
             </h2>
             <p className="text-lg text-gray-400 mb-10 max-w-lg mx-auto">
-              Get a free, no-obligation quote today. Same day and next day delivery available.
+              Get a free, no-obligation quote for skip hire in Long Eaton. Same day delivery available — book a skip now or call for the cheapest skip hire prices.
             </p>
             <a
               href="tel:01159999999"
