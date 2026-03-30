@@ -488,13 +488,15 @@ export default function BuildersSkipHire() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <p className="text-sm text-gray-500">
-            Need something smaller?{' '}
-            <Link to="/mini-skip-hire" className="text-brand-400 hover:underline">
-              View our mini skip hire options
-            </Link>
-            .
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
+            <Link to="/mini-skip-hire" className="text-brand-400 hover:underline text-sm font-medium">Mini Skip Hire</Link>
+            <span className="text-gray-600">·</span>
+            <Link to="/same-day-skip-hire" className="text-brand-400 hover:underline text-sm font-medium">Same Day Delivery</Link>
+            <span className="text-gray-600">·</span>
+            <Link to="/blog/what-can-you-put-in-a-skip" className="text-brand-400 hover:underline text-sm font-medium">Skip Waste Guide</Link>
+            <span className="text-gray-600">·</span>
+            <Link to="/blog/skip-sizes-guide" className="text-brand-400 hover:underline text-sm font-medium">Skip Sizes Guide</Link>
+          </div>
         </div>
       </section>
     </div>

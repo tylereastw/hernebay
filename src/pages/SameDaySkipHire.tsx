@@ -381,6 +381,27 @@ export default function SameDaySkipHire() {
               Mini Skip Hire
               <ArrowRight className="w-4 h-4" />
             </Link>
+            <Link
+              to="/builders-skip-hire"
+              className="inline-flex items-center gap-2 text-brand-400 hover:text-brand-500 font-semibold text-sm transition-colors"
+            >
+              Builders Skip Hire
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              to="/blog/what-can-you-put-in-a-skip"
+              className="inline-flex items-center gap-2 text-brand-400 hover:text-brand-500 font-semibold text-sm transition-colors"
+            >
+              Skip Waste Guide
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              to="/areas/beeston"
+              className="inline-flex items-center gap-2 text-brand-400 hover:text-brand-500 font-semibold text-sm transition-colors"
+            >
+              Skip Hire Beeston
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>

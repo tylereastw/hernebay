@@ -626,7 +626,7 @@ export default function WhatCanYouPutInASkip() {
             <h2 className="text-3xl md:text-4xl font-bold mb-10">Related Guides</h2>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-4 stagger-children">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 stagger-children">
             <Link
               to="/mini-skip-hire"
               className="glass rounded-3xl p-6 hover-lift group flex items-center justify-between"
@@ -645,7 +645,28 @@ export default function WhatCanYouPutInASkip() {
               to="/#skip-sizes"
               className="glass rounded-3xl p-6 hover-lift group flex items-center justify-between"
             >
+              <span className="font-semibold">Skip Sizes & Prices</span>
+              <ArrowRight className="w-5 h-5 text-brand-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/blog/skip-sizes-guide"
+              className="glass rounded-3xl p-6 hover-lift group flex items-center justify-between"
+            >
               <span className="font-semibold">Skip Sizes Guide</span>
+              <ArrowRight className="w-5 h-5 text-brand-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/same-day-skip-hire"
+              className="glass rounded-3xl p-6 hover-lift group flex items-center justify-between"
+            >
+              <span className="font-semibold">Same Day Skip Hire</span>
+              <ArrowRight className="w-5 h-5 text-brand-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/areas/beeston"
+              className="glass rounded-3xl p-6 hover-lift group flex items-center justify-between"
+            >
+              <span className="font-semibold">Skip Hire Beeston</span>
               <ArrowRight className="w-5 h-5 text-brand-400 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

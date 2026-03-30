@@ -67,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="relative border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
+          <div className="grid md:grid-cols-5 gap-10 mb-12">
             <div className="md:col-span-1">
               <Link to="/" className="flex items-center space-x-3 mb-5">
                 <div className="w-10 h-10 bg-gradient-to-br from-brand-400 to-brand-600 rounded-xl flex items-center justify-center">
@@ -83,16 +83,34 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link to="/mini-skip-hire" className="text-gray-500 hover:text-brand-400 transition-colors">Mini Skip Hire</Link></li>
                 <li><Link to="/builders-skip-hire" className="text-gray-500 hover:text-brand-400 transition-colors">Builders Skip Hire</Link></li>
                 <li><Link to="/same-day-skip-hire" className="text-gray-500 hover:text-brand-400 transition-colors">Same Day Skip Hire</Link></li>
-                <li><Link to="/#skip-sizes" className="text-gray-500 hover:text-brand-400 transition-colors">All Skip Sizes</Link></li>
+                <li><Link to="/#skip-sizes" className="text-gray-500 hover:text-brand-400 transition-colors">Skip Sizes & Prices</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-sm uppercase tracking-wide text-gray-300 mb-5">Quick Links</h4>
+              <h4 className="font-semibold text-sm uppercase tracking-wide text-gray-300 mb-5">Areas</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/areas/beeston" className="text-gray-500 hover:text-brand-400 transition-colors">Beeston</Link></li>
+                <li><Link to="/areas/stapleford" className="text-gray-500 hover:text-brand-400 transition-colors">Stapleford</Link></li>
+                <li><Link to="/areas/sandiacre" className="text-gray-500 hover:text-brand-400 transition-colors">Sandiacre</Link></li>
+                <li><Link to="/areas/ilkeston" className="text-gray-500 hover:text-brand-400 transition-colors">Ilkeston</Link></li>
+                <li><Link to="/areas/nottingham" className="text-gray-500 hover:text-brand-400 transition-colors">Nottingham</Link></li>
+                <li><Link to="/areas/derby" className="text-gray-500 hover:text-brand-400 transition-colors">Derby</Link></li>
+                <li><Link to="/areas/sawley" className="text-gray-500 hover:text-brand-400 transition-colors">Sawley</Link></li>
+                <li><Link to="/areas/breaston" className="text-gray-500 hover:text-brand-400 transition-colors">Breaston</Link></li>
+                <li><Link to="/areas/toton" className="text-gray-500 hover:text-brand-400 transition-colors">Toton</Link></li>
+                <li><Link to="/areas/chilwell" className="text-gray-500 hover:text-brand-400 transition-colors">Chilwell</Link></li>
+                <li><Link to="/areas/bramcote" className="text-gray-500 hover:text-brand-400 transition-colors">Bramcote</Link></li>
+                <li><Link to="/areas/draycott" className="text-gray-500 hover:text-brand-400 transition-colors">Draycott</Link></li>
+                <li><Link to="/areas/borrowash" className="text-gray-500 hover:text-brand-400 transition-colors">Borrowash</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-sm uppercase tracking-wide text-gray-300 mb-5">Guides</h4>
               <ul className="space-y-3 text-sm">
+                <li><Link to="/blog/what-can-you-put-in-a-skip" className="text-gray-500 hover:text-brand-400 transition-colors">What Can You Put in a Skip?</Link></li>
+                <li><Link to="/blog/skip-sizes-guide" className="text-gray-500 hover:text-brand-400 transition-colors">Skip Sizes Guide</Link></li>
                 <li><Link to="/#about" className="text-gray-500 hover:text-brand-400 transition-colors">About Us</Link></li>
-                <li><Link to="/#areas" className="text-gray-500 hover:text-brand-400 transition-colors">Areas Covered</Link></li>
                 <li><Link to="/#contact" className="text-gray-500 hover:text-brand-400 transition-colors">Contact Us</Link></li>
-                <li><Link to="/blog/what-can-you-put-in-a-skip" className="text-gray-500 hover:text-brand-400 transition-colors">Skip Waste Guide</Link></li>
               </ul>
             </div>
             <div>

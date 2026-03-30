@@ -266,6 +266,21 @@ export default function Stapleford() {
 
       <hr className="hr-gradient" />
 
+      {/* Useful Resources */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="reveal">
+            <h2 className="text-2xl font-bold mb-6">Useful <span className="gradient-text">Resources</span></h2>
+          </div>
+          <div className="stagger-children grid sm:grid-cols-2 md:grid-cols-4 gap-3">
+            <Link to="/#skip-sizes" className="glass rounded-xl p-4 hover-lift text-sm font-medium text-gray-300 hover:text-white transition-colors">Skip Sizes & Prices</Link>
+            <Link to="/same-day-skip-hire" className="glass rounded-xl p-4 hover-lift text-sm font-medium text-gray-300 hover:text-white transition-colors">Same Day Skip Hire</Link>
+            <Link to="/blog/what-can-you-put-in-a-skip" className="glass rounded-xl p-4 hover-lift text-sm font-medium text-gray-300 hover:text-white transition-colors">Skip Waste Guide</Link>
+            <Link to="/blog/skip-sizes-guide" className="glass rounded-xl p-4 hover-lift text-sm font-medium text-gray-300 hover:text-white transition-colors">Skip Sizes Guide</Link>
+          </div>
+        </div>
+      </section>
+
       {/* Nearby Areas */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto reveal">

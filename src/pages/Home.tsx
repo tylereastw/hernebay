@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Phone, Truck, Clock, Shield, ChevronRight, MapPin, Star, Recycle, Mail, PhoneCall, ArrowRight, CheckCircle2, Leaf, PoundSterling } from 'lucide-react';
 import FaqItem from '../components/FaqItem';
 
@@ -9,6 +10,7 @@ const skipSizes = [
     price: 'From £150',
     popular: false,
     icon: '🏡',
+    link: '/mini-skip-hire',
   },
   {
     name: '6 Yard Midi',
@@ -17,6 +19,7 @@ const skipSizes = [
     price: 'From £200',
     popular: true,
     icon: '🔨',
+    link: '/blog/skip-sizes-guide',
   },
   {
     name: '8 Yard Builder\'s',
@@ -25,6 +28,7 @@ const skipSizes = [
     price: 'From £250',
     popular: false,
     icon: '🏗️',
+    link: '/builders-skip-hire',
   },
   {
     name: '12 Yard Maxi',
@@ -33,13 +37,24 @@ const skipSizes = [
     price: 'From £350',
     popular: false,
     icon: '🏢',
+    link: '/blog/skip-sizes-guide',
   },
 ];
 
 const areas = [
-  'Long Eaton', 'Sandiacre', 'Breaston', 'Sawley', 'Draycott',
-  'Borrowash', 'Stapleford', 'Toton', 'Chilwell', 'Beeston',
-  'Attenborough', 'Shardlow', 'Castle Donington', 'Ilkeston',
+  { name: 'Sandiacre', path: '/areas/sandiacre' },
+  { name: 'Breaston', path: '/areas/breaston' },
+  { name: 'Sawley', path: '/areas/sawley' },
+  { name: 'Draycott', path: '/areas/draycott' },
+  { name: 'Borrowash', path: '/areas/borrowash' },
+  { name: 'Stapleford', path: '/areas/stapleford' },
+  { name: 'Toton', path: '/areas/toton' },
+  { name: 'Chilwell', path: '/areas/chilwell' },
+  { name: 'Beeston', path: '/areas/beeston' },
+  { name: 'Bramcote', path: '/areas/bramcote' },
+  { name: 'Ilkeston', path: '/areas/ilkeston' },
+  { name: 'Nottingham', path: '/areas/nottingham' },
+  { name: 'Derby', path: '/areas/derby' },
 ];
 
 const testimonials = [
@@ -276,16 +291,16 @@ export default function Home() {
                 </div>
                 <div className="hr-gradient mb-5" />
                 <p className="text-2xl font-black gradient-text text-center mb-4">{skip.price}</p>
-                <a
-                  href="tel:01159999999"
+                <Link
+                  to={skip.link}
                   className={`block w-full py-3 rounded-xl font-bold text-sm text-center transition-all ${
                     skip.popular
                       ? 'btn-gradient text-surface-950'
                       : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
                   }`}
                 >
-                  Book This Skip
-                </a>
+                  View Details
+                </Link>
               </div>
             ))}
           </div>
@@ -381,21 +396,20 @@ export default function Home() {
             <p className="text-gray-400 text-lg">Local skip hire serving Long Eaton and the surrounding Derbyshire & Nottinghamshire areas. Skip delivery across NG10 and beyond.</p>
           </div>
 
-          <div className="marquee-container mb-6">
-            <div className="flex animate-marquee space-x-4">
-              {[...areas, ...areas].map((area, i) => (
-                <span
-                  key={`${area}-${i}`}
-                  className="inline-flex items-center space-x-2 glass px-5 py-3 rounded-xl whitespace-nowrap hover:bg-white/10 transition-colors"
-                >
-                  <MapPin className="w-3.5 h-3.5 text-brand-400" />
-                  <span className="text-sm font-medium text-gray-300">{area}</span>
-                </span>
-              ))}
-            </div>
+          <div className="stagger-children grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-8">
+            {areas.map((area) => (
+              <Link
+                key={area.name}
+                to={area.path}
+                className="inline-flex items-center justify-center space-x-2 glass px-5 py-3 rounded-xl whitespace-nowrap hover:bg-white/10 transition-colors"
+              >
+                <MapPin className="w-3.5 h-3.5 text-brand-400" />
+                <span className="text-sm font-medium text-gray-300">{area.name}</span>
+              </Link>
+            ))}
           </div>
 
-          <p className="text-center text-gray-500 text-sm mt-8">
+          <p className="text-center text-gray-500 text-sm">
             Don't see your area? Give us a call — we may still be able to help!
           </p>
         </div>
@@ -459,6 +473,35 @@ export default function Home() {
             ].map((faq) => (
               <FaqItem key={faq.q} question={faq.q} answer={faq.a} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Helpful Guides */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="reveal text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-black">
+              Helpful <span className="gradient-text">Guides</span>
+            </h2>
+          </div>
+          <div className="stagger-children grid sm:grid-cols-2 gap-4">
+            <Link to="/blog/what-can-you-put-in-a-skip" className="glass hover-lift rounded-2xl p-6 group">
+              <h3 className="font-bold mb-2 group-hover:text-brand-400 transition-colors">What Can You Put in a Skip?</h3>
+              <p className="text-gray-400 text-sm">Full guide to accepted and prohibited items. Updated 2026.</p>
+            </Link>
+            <Link to="/blog/skip-sizes-guide" className="glass hover-lift rounded-2xl p-6 group">
+              <h3 className="font-bold mb-2 group-hover:text-brand-400 transition-colors">Skip Sizes Guide</h3>
+              <p className="text-gray-400 text-sm">Not sure what size? Compare all skip sizes with our visual guide.</p>
+            </Link>
+            <Link to="/same-day-skip-hire" className="glass hover-lift rounded-2xl p-6 group">
+              <h3 className="font-bold mb-2 group-hover:text-brand-400 transition-colors">Same Day Skip Hire</h3>
+              <p className="text-gray-400 text-sm">Need a skip today? Order before noon for same day delivery.</p>
+            </Link>
+            <Link to="/mini-skip-hire" className="glass hover-lift rounded-2xl p-6 group">
+              <h3 className="font-bold mb-2 group-hover:text-brand-400 transition-colors">Mini Skip Hire</h3>
+              <p className="text-gray-400 text-sm">2 & 4 yard skips from £120. Perfect for small clearouts.</p>
+            </Link>
           </div>
         </div>
       </section>

@@ -548,10 +548,31 @@ export default function MiniSkipHire() {
               <ArrowRight className="w-4 h-4 text-brand-400" />
             </Link>
             <Link
-              to="/"
+              to="/#skip-sizes"
               className="glass px-6 py-3 rounded-2xl text-sm font-medium text-gray-300 hover:text-white transition-colors flex items-center gap-2 hover-lift"
             >
-              All Skip Sizes
+              All Skip Sizes & Prices
+              <ArrowRight className="w-4 h-4 text-brand-400" />
+            </Link>
+            <Link
+              to="/blog/what-can-you-put-in-a-skip"
+              className="glass px-6 py-3 rounded-2xl text-sm font-medium text-gray-300 hover:text-white transition-colors flex items-center gap-2 hover-lift"
+            >
+              What Can You Put in a Skip?
+              <ArrowRight className="w-4 h-4 text-brand-400" />
+            </Link>
+            <Link
+              to="/blog/skip-sizes-guide"
+              className="glass px-6 py-3 rounded-2xl text-sm font-medium text-gray-300 hover:text-white transition-colors flex items-center gap-2 hover-lift"
+            >
+              Skip Sizes Guide
+              <ArrowRight className="w-4 h-4 text-brand-400" />
+            </Link>
+            <Link
+              to="/same-day-skip-hire"
+              className="glass px-6 py-3 rounded-2xl text-sm font-medium text-gray-300 hover:text-white transition-colors flex items-center gap-2 hover-lift"
+            >
+              Same Day Skip Hire
               <ArrowRight className="w-4 h-4 text-brand-400" />
             </Link>
           </div>

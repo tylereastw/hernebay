@@ -618,6 +618,30 @@ export default function SkipSizesGuide() {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-brand-400 transition-colors" />
               </Link>
+              <Link
+                to="/same-day-skip-hire"
+                className="glass rounded-3xl p-6 hover-lift group flex items-center justify-between"
+              >
+                <div>
+                  <p className="font-semibold text-white group-hover:text-brand-400 transition-colors">
+                    Same Day Skip Hire
+                  </p>
+                  <p className="text-gray-500 text-sm mt-1">Order before noon for same day delivery</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-brand-400 transition-colors" />
+              </Link>
+              <Link
+                to="/areas/beeston"
+                className="glass rounded-3xl p-6 hover-lift group flex items-center justify-between"
+              >
+                <div>
+                  <p className="font-semibold text-white group-hover:text-brand-400 transition-colors">
+                    Skip Hire Beeston
+                  </p>
+                  <p className="text-gray-500 text-sm mt-1">Local skip hire in the NG9 area</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-brand-400 transition-colors" />
+              </Link>
             </div>
           </div>
         </div>
