@@ -33,6 +33,12 @@
     background-size: 40px 40px;
   }
 
+  .blueprint-grid-dot {
+    background-image: radial-gradient(circle, #c7c6ca 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.1;
+  }
+
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
