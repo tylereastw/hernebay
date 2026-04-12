@@ -31,9 +31,9 @@ function Layout() {
               <Icon name="phone" className="text-lg" />
               07782 222 906
             </a>
-            <button className="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full font-bold text-sm active:scale-95 duration-200 shadow-lg hover:opacity-90 transition-all">
+            <a href="http://zipskips.co.uk/?location=long-eaton" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full font-bold text-sm active:scale-95 duration-200 shadow-lg hover:opacity-90 transition-all">
               Book Now
-            </button>
+            </a>
           </div>
         </nav>
       </header>

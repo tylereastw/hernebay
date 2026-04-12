@@ -110,15 +110,18 @@ export default function SkipSizes() {
                 <span className="text-4xl font-black text-primary">{skip.price}</span>
                 <span className="text-on-surface-variant font-bold text-sm">TOTAL</span>
               </div>
-              <button
-                className={`w-full py-4 rounded-full font-bold text-sm tracking-wide active:scale-95 transition-all ${
+              <a
+                href="http://zipskips.co.uk/?location=long-eaton"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block w-full py-4 rounded-full font-bold text-sm tracking-wide active:scale-95 transition-all text-center ${
                   skip.popular
                     ? 'bg-gradient-to-br from-primary to-primary-container text-on-primary shadow-lg'
                     : 'bg-primary text-on-primary'
                 }`}
               >
                 Select Size
-              </button>
+              </a>
             </div>
           </div>
         ))}

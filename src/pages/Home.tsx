@@ -66,9 +66,9 @@ export default function Home() {
               and local expertise you can rely on.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <button className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform">
+              <a href="http://zipskips.co.uk/?location=long-eaton" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform">
                 Book Online
-              </button>
+              </a>
               <a href="tel:07782222906" className="px-8 py-4 bg-secondary-container text-on-secondary-container rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
                 <Icon name="call" />
                 Call Now
@@ -199,15 +199,18 @@ export default function Home() {
                     Inc. delivery
                   </span>
                 </p>
-                <button
-                  className={`w-full py-3 font-bold rounded-full transition-colors ${
+                <a
+                  href="http://zipskips.co.uk/?location=long-eaton"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full py-3 font-bold rounded-full transition-colors text-center ${
                     skip.popular
                       ? 'bg-gradient-to-br from-primary to-primary-container text-white shadow-lg'
                       : 'bg-surface-container text-on-surface hover:bg-primary hover:text-white'
                   }`}
                 >
                   {skip.popular ? 'Book Now' : 'Select Size'}
-                </button>
+                </a>
               </div>
             </div>
           ))}
