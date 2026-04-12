@@ -62,8 +62,8 @@ export default function Home() {
               <span className="text-primary italic block">Zero VAT.</span>
             </h1>
             <p className="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed">
-              The premium editorial service for domestic waste. Family-run,
-              same-day delivery, and local expertise you can rely on.
+              The premium editorial service for domestic waste. Family-run
+              and local expertise you can rely on.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform">
@@ -92,7 +92,7 @@ export default function Home() {
                 NO VAT
               </p>
               <p className="text-on-surface-variant text-sm font-medium">
-                On all domestic hires within the Long Eaton area.
+                Save <span className="font-bold text-primary">20%</span> on all domestic hires within the Long Eaton area.
               </p>
             </div>
           </div>
@@ -129,20 +129,20 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
                 <Icon name="local_shipping" />
               </div>
-              <h3 className="text-xl font-bold">Same-Day Delivery</h3>
+              <h3 className="text-xl font-bold">Reliable Delivery</h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Order before 10 AM for guaranteed same-day delivery to your
-                doorstep.
+                Flexible scheduling to suit your project. We'll confirm a
+                delivery window that works for you.
               </p>
             </div>
             <div className="bg-surface-container-lowest p-10 rounded-lg space-y-4 shadow-sm border border-outline-variant/10">
               <div className="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-tertiary-fixed">
-                <Icon name="eco" />
+                <Icon name="savings" />
               </div>
-              <h3 className="text-xl font-bold">Eco-Conscious</h3>
+              <h3 className="text-xl font-bold">Save 20% Instantly</h3>
               <p className="text-on-surface-variant leading-relaxed">
-                We divert 90% of all collected waste away from landfills through
-                specialized recycling.
+                No VAT means you save 20% compared to VAT-registered
+                competitors. The price you see is what you pay.
               </p>
             </div>
           </div>
@@ -249,9 +249,9 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-2 gap-8">
               <div className="space-y-2">
-                <p className="text-3xl font-black text-primary">100%</p>
+                <p className="text-3xl font-black text-primary">20%</p>
                 <p className="text-on-surface-variant text-sm font-bold uppercase tracking-widest">
-                  Legal Compliance
+                  VAT Savings
                 </p>
               </div>
               <div className="space-y-2">
