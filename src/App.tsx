@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Icon } from './components/Icon';
 import Home from './pages/Home';
 import SkipSizes from './pages/SkipSizes';
+import ServicePage from './pages/ServicePage';
+import LocationPage from './pages/LocationPage';
 
 function Layout() {
   return (
@@ -42,6 +44,8 @@ function Layout() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skips" element={<SkipSizes />} />
+        <Route path="/:slug" element={<ServicePage />} />
+        <Route path="/skip-hire/:location" element={<LocationPage />} />
       </Routes>
 
       {/* Footer */}
