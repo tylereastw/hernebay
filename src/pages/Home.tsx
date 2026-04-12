@@ -69,14 +69,14 @@ export default function Home() {
               <button className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform">
                 Book Online
               </button>
-              <button className="px-8 py-4 bg-secondary-container text-on-secondary-container rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
+              <a href="tel:07782222906" className="px-8 py-4 bg-secondary-container text-on-secondary-container rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
                 <Icon name="call" />
                 Call Now
-              </button>
-              <button className="px-8 py-4 bg-tertiary-container text-tertiary-fixed rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
+              </a>
+              <a href="https://wa.me/447858797922" className="px-8 py-4 bg-tertiary-container text-tertiary-fixed rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
                 <Icon name="chat" />
                 WhatsApp
-              </button>
+              </a>
             </div>
           </div>
           <div className="relative">

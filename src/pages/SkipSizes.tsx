@@ -139,14 +139,14 @@ export default function SkipSizes() {
             the 8-yard Builders Skip for its structural integrity.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
+            <a href="tel:07782222906" className="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
               <Icon name="call" />
               Speak to an Expert
-            </button>
-            <button className="bg-tertiary-container text-tertiary-fixed px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
+            </a>
+            <a href="https://wa.me/447858797922" className="bg-tertiary-container text-tertiary-fixed px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
               <Icon name="chat" />
               WhatsApp Support
-            </button>
+            </a>
           </div>
         </div>
       </section>

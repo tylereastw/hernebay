@@ -27,9 +27,9 @@ function Layout() {
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <a href="tel:0115" className="hidden sm:flex items-center gap-2 text-[#154212] font-bold text-sm">
+            <a href="tel:07782222906" className="hidden sm:flex items-center gap-2 text-[#154212] font-bold text-sm">
               <Icon name="phone" className="text-lg" />
-              0115 000 0000
+              07782 222 906
             </a>
             <button className="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full font-bold text-sm active:scale-95 duration-200 shadow-lg hover:opacity-90 transition-all">
               Book Now
@@ -71,14 +71,14 @@ function Layout() {
       {/* Mobile Bottom Nav */}
       <div className="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#f5fcef]/90 backdrop-blur-md rounded-t-[3rem] shadow-[0_-10px_30px_rgba(21,66,18,0.08)] z-50">
         <a
-          href="tel:01150000000"
+          href="tel:07782222906"
           className="flex flex-col items-center justify-center text-[#171d16] p-3 hover:bg-[#e9f0e4] rounded-full transition-transform active:scale-90"
         >
           <Icon name="phone" />
           <span className="text-[10px] font-bold uppercase tracking-widest mt-1">Call</span>
         </a>
         <a
-          href="#"
+          href="https://wa.me/447858797922"
           className="flex flex-col items-center justify-center text-[#171d16] p-3 hover:bg-[#e9f0e4] rounded-full transition-transform active:scale-90"
         >
           <Icon name="chat" />
