@@ -1,188 +1,295 @@
-import { Link } from 'react-router-dom';
 import { Icon } from '../components/Icon';
 
-const skipSizes = [
+const skipCatalog = [
   {
-    name: '2 Yard Mini Skip',
-    description: 'Ideal for 25-35 black bags. Perfect for garden waste and small home tasks.',
-    price: '£95.00',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCJObV-YAuw3Inp_uJ0AOh_eViakQ_G2e5vxZpSiy2P_SyiPFo9lV_dnX9626Jm0qh1_gDd77xQslf_2kIr2Xn8KQ3YwLcCP-OLR8RwIB7ij22TbS_u3n-ZDOiwCIUSbK7H_9oIZoAH6UdM0LS6kFWQTyN75U56VvSt3MVPbkCrUnIbAQwT0CnyXYX_ooxYjK5KYvgkQQYIcdDNJKEu26x3wpnfT1KOcQSZp4bvRNg0UhV2sdwlfvwsQAN2E3Ze4OIu0oGOzFFd5NU',
+    name: '2-Yard Mini Skip',
+    capacity: 'Fits ~20-30 bin bags',
+    price: '£120.00',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBWGWn0xyMgjqkU48PhZzgTg2IkngjQMk1b0BEDne-2coDX8X5PLAPwHjCY_OO4Osa4hEpGF_YF9KCjCj2dVkXOuFLirzY7OBNaoaDVnYvt0ujT9uDV8jmzM38rq5pu1alWTPy6E5lGm9SFg51WKcHhdrOlIzvDapdL3lEYfLycALL0l-IJUnGvLM05Kwl83A0eLp2Wk49VBRkdyyUUtqymwynerjI5BwppwMO2_Re95iFhkKitsA_h0u_ycNO1k0R21eEni90iUas',
     popular: false,
   },
   {
-    name: '4 Yard Midi Skip',
-    description: 'Holds roughly 45-55 black bags. Great for bathroom or kitchen refits.',
-    price: '£145.00',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDkGslMFdmXWbKpbeFdBCUuroft6cee1TMZCXOb88ltS4m-mZADosNZnDLIWKfTDr6ed23CJs47_orDw8BgsDBj7zlRzf1maqnR7QFG7Pli_a3PUbesbbpaR7p-SW_-_SRsReyyGb58PUsVTNdm2PivLh1h4cT7zPhdpfzmoPCwmFdOHLWnmQ7Sik9nMBRQtB4U0We9ETZqDBUr3_pK5cy-DntdT5Qc1DDDu06rOqJduRctJdTk-lKGRQ4UlkjyLapUsf3v8EM1Zdc',
+    name: '4-Yard Midi Skip',
+    capacity: 'Fits ~40-50 bin bags',
+    price: '£185.00',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuATTMAKflCsRpoM_J33CgziooulSi78L0Go8ZP9APr180iKyJtCYNyaOQwX6X6vceCGY7aOUtxHEUt7s6koE4QSr8CuAjPgOar6VJIWSlB5796hR2ELtDtQCMgr-BrTne0RE2Bqfl8umS-PGZXa7VPrw6kCVYyECzxSoskpqheAeaCR3bLZPG1MXjAq24HBytj1PSxkzXcZXqW_snstG1iXSiBQTsVEnRY8qSD758ws_l28J9qMOgTYRRwCkEw4DaFj8ZTS34U_-Js',
+    popular: false,
+  },
+  {
+    name: '8-Yard Builders Skip',
+    capacity: 'Fits ~80-90 bin bags',
+    price: '£260.00',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBEPpL8--7fPSknz5h_sV7Slg4CppjWvWfnPSNJrBaVdQvfj5TKEpCmiHIPRJJSmVegnYF38wAEBg3fPNZjgCmv4o1GtXTt7j3wQgiY1_v9Dw7ReNHsGB4Ws6B7A-tmiV7h3lytuL3dBJ6hlyjnLifVbY0Lvgs2Ywlx7cnPGyGRf2u5li8SpLaGPoEakLy4bv2UiuqZlRQwOhz5DIC8hcm1xr5SQHutI5PgSXlUarovZJR5xy1u241gS5i23PlBzkXCPIPFUK2s2t0',
     popular: true,
   },
   {
-    name: '8 Yard Builders Skip',
-    description: 'Holds about 80-90 black bags. The heavy-duty choice for construction.',
-    price: '£220.00',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAtRFoDR0mNogxg7U5c-nU6jKzE74sgrf6MEopvFx2QtXgSFysyKYoErtAxCLYlLqWbyPJfNv3JoY3ntgex8NofGVfPkDCS2ylr2xs0_E0ty4FBVptRr63yCTXtpp_avJOv5lJChjEZH0ksO-TbfIBKLdF3PjbL1fzLZ_tZPe8T5yEOMibqNGsLDkVrsmfPB3-lf7XS5xn071ruB8eKh1_gLRIrRC6vxJ9UxjKBmdOSbi4IPxcvPvtOCfAxFIpuKj7lnbvrqDcBuwU',
+    name: '12-Yard Large Skip',
+    capacity: 'Fits ~120 bin bags',
+    price: '£345.00',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQCLcrkNNtkzgqleorBi23CRQOTEyFSPjX6YR8j654aMFJXjO_-wpjIZwdltI_mW7sjNUl-cwaYQa9sodVUr_ku-NeT8OgKlyx-yXm41vLpN3-T8x7x-UnLQFNhn_XLZs68CAgNA-mWNwWg7H66k1JjhoHpnwD71Cb_ZsmtKCCoF-hy1iR7N847v_HFZboqwn_iRa28okIYnE0nGNjfbKgOsvxnZhaDNjScdCIVWvZuJCIqCrHNjTReuBT_IgDywryY4Hq5C7U2Y0',
     popular: false,
+  },
+];
+
+const faqs = [
+  {
+    q: 'Do I need a permit for the skip?',
+    a: 'If the skip is placed on your private driveway, no permit is needed. If it needs to be on a public road, we can arrange the necessary council permits for a small additional fee.',
+  },
+  {
+    q: 'How long can I keep the skip for?',
+    a: "Our standard hire period is up to 14 days. If you need it for longer, just give us a call and we can usually extend this at no extra cost depending on skip availability.",
+  },
+  {
+    q: "What can't I put in the skip?",
+    a: 'For environmental and safety reasons, we cannot accept asbestos, batteries, clinical waste, fridges/freezers, gas cylinders, liquids, oil, paint, or tyres.',
   },
 ];
 
 export default function Home() {
   return (
-    <>
-      {/* Hero Section */}
-      <header className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-container/10 text-primary font-bold rounded-full text-xs mb-6">
-              <Icon name="verified" className="text-sm" />
-              THE MODERN NEIGHBOR SERVICE
+    <main className="pt-24">
+      {/* Hero */}
+      <section className="relative px-6 py-12 md:py-24 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container rounded-full text-on-secondary-container font-bold text-xs tracking-widest uppercase">
+              <Icon name="verified_user" className="text-base" />
+              Long Eaton's Trusted Choice
             </div>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-6 leading-[1.1]">
-              Affordable Skip Hire in{' '}
-              <span className="text-primary">Long Eaton</span>
+            <h1 className="text-5xl md:text-7xl font-extrabold text-on-surface tracking-tighter leading-[0.95]">
+              Professional Skip Hire.{' '}
+              <span className="text-primary italic block">Zero VAT.</span>
             </h1>
-            <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">
-              Professional, reliable, and{' '}
-              <span className="font-bold text-primary">NO VAT</span> on all
-              domestic skips. Local service with digital prestige.
+            <p className="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed">
+              The premium editorial service for domestic waste. Family-run,
+              same-day delivery, and local expertise you can rely on.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/skips"
-                className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold text-lg shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2"
-              >
+            <div className="flex flex-wrap gap-4 pt-4">
+              <button className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform">
                 Book Online
-                <Icon name="arrow_forward" />
-              </Link>
-              <button className="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-bold text-lg active:scale-95 transition-all flex items-center justify-center gap-2">
+              </button>
+              <button className="px-8 py-4 bg-secondary-container text-on-secondary-container rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
                 <Icon name="call" />
                 Call Now
               </button>
-              <button className="bg-tertiary-container text-tertiary-fixed px-8 py-4 rounded-full font-bold text-lg active:scale-95 transition-all flex items-center justify-center gap-2">
+              <button className="px-8 py-4 bg-tertiary-container text-tertiary-fixed rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
                 <Icon name="chat" />
                 WhatsApp
               </button>
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -top-10 -right-10 w-64 h-64 bg-secondary-fixed/30 rounded-full blur-3xl -z-10" />
-            <div className="rounded-xl overflow-hidden shadow-2xl">
+            <div className="aspect-square rounded-xl overflow-hidden shadow-2xl">
               <img
-                alt="Commercial skip on a clean driveway"
-                className="w-full h-[500px] object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIXa0r3K3Bd5OEN3zP-GWtVTffiINcGYv8SzJWEF1SRrOwJVprrKOKa9ShC946beUFIT3GMTiJS6BzeV9r5J4PtsISK_WoihUz3M8wohkuaTcNc_EW5uXoPDyj3SxAOH2H5kLoYjAvxRIQrOu4cKLe13m8RArNusoVs1zFn1QBWsvA-57XqZOvtapuEVztpA_Zmr8vVj5Y3Jmckifdy38-VonTQr03kEUq2nEbu1aCWUI3hVdJaKJKc6uhfyiw1Otr54pyf3cxo3M"
+                alt="Skip on a clean driveway"
+                className="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Rg1S4p7q3iqkqd_xCw5UbY4PHhlerPmf8g2rqYp0UizA0VHuIrxAe3G_0GeSVSopGr07Zq9B5dyq1RFZzTv1roxcfQvCorB6vJRCazt2qSFF13I4mpQD-ySAz7IRU410g2vxDvoZUdssIwNeDWzDT-lQy1kWKykLdK7Zg3GD8zC1t6RuKW5-3sM_ST8zkmaHE5YNmbAb057v7-1Lee--SFesrt29YCLcQP6_xd7ngC8xiXz0aMkxPB6tRtlAD9HK6RMe0yMGG0g"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-secondary text-on-secondary p-8 rounded-xl shadow-xl transform -rotate-3">
-              <div className="text-4xl font-black tracking-tighter">NO VAT</div>
-              <div className="text-xs font-bold tracking-widest uppercase opacity-80 mt-1">
-                Domestic Savings
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Benefits Bento Grid */}
-      <section className="py-24 bg-surface-container-low px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-            <div>
-              <h2 className="text-4xl font-extrabold tracking-tight text-on-surface mb-2">
-                Why Neighbors Trust Us
-              </h2>
-              <p className="text-on-surface-variant">
-                The local standard for waste management
+            <div className="absolute -bottom-6 -left-6 bg-surface-container-lowest p-8 rounded-lg shadow-xl max-w-xs border border-outline-variant/10">
+              <p className="text-primary font-black text-4xl tracking-tighter italic">
+                NO VAT
               </p>
-            </div>
-            <div className="h-1 w-24 bg-primary rounded-full" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-surface-container-lowest p-8 rounded-lg shadow-sm border border-outline-variant/10 flex flex-col gap-6">
-              <div className="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-lg">
-                <Icon name="electric_bolt" className="text-primary text-3xl" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Same Day Delivery</h3>
-                <p className="text-on-surface-variant leading-relaxed">
-                  Book before 10am and we'll have your skip delivered by the
-                  afternoon. Speed without the stress.
-                </p>
-              </div>
-            </div>
-            <div className="bg-primary text-on-primary p-8 rounded-lg shadow-sm flex flex-col gap-6 transform md:-translate-y-4">
-              <div className="w-14 h-14 bg-primary-container flex items-center justify-center rounded-lg">
-                <Icon name="eco" className="text-on-primary-container text-3xl" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-on-primary">
-                  Eco-Friendly Disposal
-                </h3>
-                <p className="text-on-primary/80 leading-relaxed">
-                  We recycle up to 95% of all waste collected. Sustainable
-                  service that cares for Long Eaton's future.
-                </p>
-              </div>
-            </div>
-            <div className="bg-surface-container-lowest p-8 rounded-lg shadow-sm border border-outline-variant/10 flex flex-col gap-6">
-              <div className="w-14 h-14 bg-secondary-fixed flex items-center justify-center rounded-lg">
-                <Icon name="savings" className="text-secondary text-3xl" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Zero VAT Added</h3>
-                <p className="text-on-surface-variant leading-relaxed">
-                  The price you see is the price you pay. No hidden taxes or
-                  surcharges for any domestic skip hire.
-                </p>
-              </div>
+              <p className="text-on-surface-variant text-sm font-medium">
+                On all domestic hires within the Long Eaton area.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Skip Sizes */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <span className="text-primary font-bold tracking-widest uppercase text-sm">
-            Our Inventory
-          </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mt-2 mb-6">
-            Choose Your Size
-          </h2>
-          <p className="max-w-2xl mx-auto text-on-surface-variant text-lg">
-            From garden clear-outs to major renovations, we have the perfect
-            capacity for your project.
-          </p>
+      {/* Why Choose Us */}
+      <section
+        id="why"
+        className="px-6 py-20 bg-surface-container rounded-xl mx-4 md:mx-12 overflow-hidden"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16 text-center max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-on-surface">
+              Modern Service, Traditional Values
+            </h2>
+            <p className="text-on-surface-variant">
+              We've reimagined skip hire to be cleaner, faster, and more
+              neighborly.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-surface-container-lowest p-10 rounded-lg space-y-4 shadow-sm border border-outline-variant/10">
+              <div className="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+                <Icon name="family_history" />
+              </div>
+              <h3 className="text-xl font-bold">Family-Run</h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Three generations of local service means we care about our
+                streets as much as you do.
+              </p>
+            </div>
+            <div className="bg-surface-container-lowest p-10 rounded-lg space-y-4 shadow-sm border border-outline-variant/10">
+              <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                <Icon name="local_shipping" />
+              </div>
+              <h3 className="text-xl font-bold">Same-Day Delivery</h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Order before 10 AM for guaranteed same-day delivery to your
+                doorstep.
+              </p>
+            </div>
+            <div className="bg-surface-container-lowest p-10 rounded-lg space-y-4 shadow-sm border border-outline-variant/10">
+              <div className="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-tertiary-fixed">
+                <Icon name="eco" />
+              </div>
+              <h3 className="text-xl font-bold">Eco-Conscious</h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                We divert 90% of all collected waste away from landfills through
+                specialized recycling.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {skipSizes.map((skip) => (
-            <div key={skip.name} className="group">
-              <div className="relative bg-surface-container rounded-xl overflow-hidden mb-6 aspect-square flex items-center justify-center p-8">
+      </section>
+
+      {/* Skip Catalog */}
+      <section id="catalog" className="px-6 py-24 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+          <div className="max-w-xl">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 text-on-surface">
+              The Right Size for Every Task
+            </h2>
+            <p className="text-on-surface-variant text-lg">
+              From garden cleanups to full home renovations, we have the perfect
+              skip for your project.
+            </p>
+          </div>
+          <div className="flex gap-2 bg-surface-container p-1 rounded-full">
+            <button className="px-6 py-2 bg-surface-container-lowest rounded-full font-bold text-sm shadow-sm">
+              Residential
+            </button>
+            <button className="px-6 py-2 text-on-surface-variant font-bold text-sm">
+              Commercial
+            </button>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {skipCatalog.map((skip) => (
+            <div key={skip.name} className="group space-y-6">
+              <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-variant">
                 <img
                   alt={skip.name}
-                  className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   src={skip.image}
                 />
-                <div className="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-black">
+                <div className="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                   NO VAT
                 </div>
                 {skip.popular && (
-                  <div className="absolute top-4 left-4 bg-primary text-on-primary px-4 py-1 rounded-full text-xs font-bold">
+                  <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                     MOST POPULAR
                   </div>
                 )}
               </div>
-              <h3 className="text-2xl font-bold mb-2">{skip.name}</h3>
-              <p className="text-on-surface-variant mb-4">{skip.description}</p>
-              <div className="text-3xl font-black text-primary">
-                {skip.price}{' '}
-                <span className="text-sm font-normal text-on-surface-variant">
-                  flat rate
-                </span>
+              <div>
+                <h3 className="text-2xl font-bold mb-1">{skip.name}</h3>
+                <p className="text-on-surface-variant text-sm mb-4">
+                  {skip.capacity}
+                </p>
+                <p className="text-primary font-black text-2xl mb-4">
+                  {skip.price}{' '}
+                  <span className="text-xs font-normal text-on-surface-variant tracking-normal">
+                    Inc. delivery
+                  </span>
+                </p>
+                <button
+                  className={`w-full py-3 font-bold rounded-full transition-colors ${
+                    skip.popular
+                      ? 'bg-gradient-to-br from-primary to-primary-container text-white shadow-lg'
+                      : 'bg-surface-container text-on-surface hover:bg-primary hover:text-white'
+                  }`}
+                >
+                  {skip.popular ? 'Book Now' : 'Select Size'}
+                </button>
               </div>
             </div>
           ))}
         </div>
       </section>
-    </>
+
+      {/* About */}
+      <section className="px-6 py-24 bg-surface-container-low overflow-hidden">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <div className="relative order-2 lg:order-1">
+            <div className="bg-primary-container rounded-xl w-full aspect-video flex items-center justify-center p-12">
+              <div className="text-white space-y-6">
+                <Icon name="handshake" className="text-6xl" />
+                <h3 className="text-4xl font-bold tracking-tight">
+                  Built on Trust
+                </h3>
+                <p className="text-primary-fixed leading-relaxed text-lg">
+                  Since 1988, we've been the silent partner in thousands of home
+                  improvements across Long Eaton. We're more than just waste
+                  removal; we're your local neighbor ensuring your community
+                  stays clean and vibrant.
+                </p>
+              </div>
+            </div>
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-secondary-container rounded-full flex items-center justify-center text-center p-6 shadow-xl hidden md:flex">
+              <p className="text-on-secondary-container font-black text-lg leading-tight uppercase tracking-tighter">
+                Licensed Waste Carrier
+              </p>
+            </div>
+          </div>
+          <div className="space-y-8 order-1 lg:order-2">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface">
+              Experience the Editorial Standard in Service
+            </h2>
+            <p className="text-on-surface-variant text-lg leading-relaxed">
+              We don't believe skip hire should be messy. From our clean,
+              well-maintained vehicles to our uniformed, polite drivers, we
+              bring a level of professionalism that's rare in the industry.
+            </p>
+            <div className="grid grid-cols-2 gap-8">
+              <div className="space-y-2">
+                <p className="text-3xl font-black text-primary">100%</p>
+                <p className="text-on-surface-variant text-sm font-bold uppercase tracking-widest">
+                  Legal Compliance
+                </p>
+              </div>
+              <div className="space-y-2">
+                <p className="text-3xl font-black text-primary">24h</p>
+                <p className="text-on-surface-variant text-sm font-bold uppercase tracking-widest">
+                  Rapid Response
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faqs" className="px-6 py-24 max-w-4xl mx-auto">
+        <h2 className="text-4xl font-extrabold tracking-tighter text-center mb-16 text-on-surface">
+          Common Questions
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((faq) => (
+            <details
+              key={faq.q}
+              className="group bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/10"
+            >
+              <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
+                <span className="text-lg font-bold">{faq.q}</span>
+                <Icon
+                  name="expand_more"
+                  className="transition-transform group-open:rotate-180"
+                />
+              </summary>
+              <div className="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

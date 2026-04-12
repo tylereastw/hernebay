@@ -5,29 +5,38 @@ import SkipSizes from './pages/SkipSizes';
 
 function Layout() {
   return (
-    <div className="bg-background text-on-background selection:bg-primary-fixed selection:text-primary">
-      {/* TopAppBar */}
-      <nav className="fixed top-0 w-full z-50 bg-emerald-50/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(21,66,18,0.06)]">
-        <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
+    <div className="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+      {/* Header */}
+      <header className="fixed top-0 w-full z-50 bg-[#f5fcef]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(21,66,18,0.06)]">
+        <nav className="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-2">
-            <Icon name="recycling" className="text-emerald-900 text-[28px]" />
-            <span className="text-xl font-bold tracking-tighter text-emerald-900">
-              LONG EATON SKIPS
+            <Icon name="recycling" className="text-[#154212] text-2xl" />
+            <span className="text-xl font-black text-[#154212] tracking-tighter">
+              NO VAT SKIPS
             </span>
           </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">
-            <Link to="/" className="text-emerald-900 font-bold">Sizes</Link>
-            <a href="#" className="text-emerald-800/70 hover:text-emerald-600 transition-colors">Prices</a>
-            <a href="#" className="text-emerald-800/70 hover:text-emerald-600 transition-colors">Coverage</a>
-            <a href="#" className="text-emerald-800/70 hover:text-emerald-600 transition-colors">Contact</a>
+          <div className="hidden md:flex items-center gap-8 text-sm font-bold tracking-tight">
+            <a href="#catalog" className="text-[#154212] font-bold hover:opacity-90 transition-opacity">
+              Skip Sizes
+            </a>
+            <a href="#why" className="text-[#171d16]/70 hover:opacity-90 transition-opacity">
+              Why Us
+            </a>
+            <a href="#faqs" className="text-[#171d16]/70 hover:opacity-90 transition-opacity">
+              FAQs
+            </a>
           </div>
-          <div className="flex items-center">
-            <span className="bg-secondary text-on-secondary px-4 py-1 rounded-full text-[10px] font-black tracking-widest uppercase">
-              NO VAT
-            </span>
+          <div className="flex items-center gap-4">
+            <a href="tel:0115" className="hidden sm:flex items-center gap-2 text-[#154212] font-bold text-sm">
+              <Icon name="phone" className="text-lg" />
+              0115 000 0000
+            </a>
+            <button className="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full font-bold text-sm active:scale-95 duration-200 shadow-lg hover:opacity-90 transition-all">
+              Book Now
+            </button>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
       {/* Page Content */}
       <Routes>
@@ -36,43 +45,51 @@ function Layout() {
       </Routes>
 
       {/* Footer */}
-      <footer className="w-full pt-12 pb-32 bg-emerald-100">
-        <div className="flex flex-col items-center text-center px-8 gap-6 w-full">
-          <Link to="/" className="flex items-center gap-2">
-            <Icon name="recycling" className="text-emerald-900 text-[24px]" />
-            <span className="text-lg font-black text-emerald-900">LONG EATON SKIPS</span>
-          </Link>
-          <div className="flex flex-wrap justify-center gap-6 md:gap-12">
-            {['Terms', 'Privacy', 'Coverage', 'WhatsApp Support'].map((label) => (
-              <a key={label} href="#" className="text-emerald-800/80 hover:text-emerald-600 transition-colors text-sm leading-relaxed">
-                {label}
-              </a>
-            ))}
+      <footer className="w-full pt-16 pb-32 bg-[#e9f0e4] text-[#154212]">
+        <div className="w-full flex flex-col items-center text-center px-8 max-w-7xl mx-auto">
+          <div className="mb-12 space-y-4">
+            <Link to="/" className="flex items-center justify-center gap-2 mb-2">
+              <Icon name="recycling" className="text-3xl" />
+              <span className="text-lg font-bold text-[#154212]">NO VAT SKIPS</span>
+            </Link>
+            <p className="text-sm leading-relaxed max-w-md opacity-80">
+              Premium domestic skip hire for Long Eaton and surrounding areas.
+              Professional, family-run, and VAT-free for homeowners.
+            </p>
           </div>
-          <p className="max-w-2xl text-emerald-800/60 text-sm leading-relaxed">
-            &copy; {new Date().getFullYear()} Long Eaton Skips. The Modern Neighbor Service.
-            NO VAT on all domestic skips. Serving Long Eaton, Sandiacre, and surrounding areas.
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
+            <a href="#" className="text-[#154212] underline hover:text-[#154212] transition-colors">Terms</a>
+            <a href="#" className="text-[#171d16]/60 hover:text-[#154212] transition-colors">Privacy</a>
+            <a href="#" className="text-[#171d16]/60 hover:text-[#154212] transition-colors">Service Areas</a>
+          </div>
+          <p className="text-sm leading-relaxed opacity-60">
+            &copy; {new Date().getFullYear()} The Editorial Skip Service. No VAT on all domestic hires.
           </p>
         </div>
       </footer>
 
       {/* Mobile Bottom Nav */}
-      <div className="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-emerald-50 shadow-[0_-10px_40px_rgba(21,66,18,0.08)] rounded-t-[3rem]">
-        <Link to="/skips" className="flex flex-col items-center justify-center text-emerald-800 opacity-60 hover:opacity-100 active:scale-90 transition-all">
-          <Icon name="straighten" />
-          <span className="text-[11px] font-semibold uppercase tracking-wider mt-1">Sizes</span>
-        </Link>
-        <a href="#" className="flex flex-col items-center justify-center text-emerald-800 opacity-60 hover:opacity-100 active:scale-90 transition-all">
-          <Icon name="payments" />
-          <span className="text-[11px] font-semibold uppercase tracking-wider mt-1">Prices</span>
+      <div className="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#f5fcef]/90 backdrop-blur-md rounded-t-[3rem] shadow-[0_-10px_30px_rgba(21,66,18,0.08)] z-50">
+        <a
+          href="tel:01150000000"
+          className="flex flex-col items-center justify-center text-[#171d16] p-3 hover:bg-[#e9f0e4] rounded-full transition-transform active:scale-90"
+        >
+          <Icon name="phone" />
+          <span className="text-[10px] font-bold uppercase tracking-widest mt-1">Call</span>
         </a>
-        <Link to="/skips" className="flex flex-col items-center justify-center bg-yellow-400 text-emerald-950 rounded-full px-6 py-2 active:scale-90 transition-all">
-          <Icon name="calendar_month" />
-          <span className="text-[11px] font-semibold uppercase tracking-wider mt-1">Book</span>
-        </Link>
-        <a href="#" className="flex flex-col items-center justify-center text-emerald-800 opacity-60 hover:opacity-100 active:scale-90 transition-all">
+        <a
+          href="#"
+          className="flex flex-col items-center justify-center text-[#171d16] p-3 hover:bg-[#e9f0e4] rounded-full transition-transform active:scale-90"
+        >
           <Icon name="chat" />
-          <span className="text-[11px] font-semibold uppercase tracking-wider mt-1">Contact</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest mt-1">WhatsApp</span>
+        </a>
+        <a
+          href="#catalog"
+          className="flex flex-col items-center justify-center bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white rounded-full p-3 shadow-lg transition-transform active:scale-90"
+        >
+          <Icon name="calendar_month" />
+          <span className="text-[10px] font-bold uppercase tracking-widest mt-1">Book</span>
         </a>
       </div>
     </div>
