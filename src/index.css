@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,49 +12,34 @@
   }
 
   body {
-    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background-color: #f5fcef;
+    color: #171d16;
     overflow-x: hidden;
   }
 
-  h1, h2, h3, .font-technical {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-  }
-
   ::selection {
-    background-color: #8d4f00;
-    color: #ffffff;
+    background-color: #bcf0ae;
+    color: #154212;
   }
 }
 
 @layer components {
-  .blueprint-grid {
-    background-image: linear-gradient(to right, rgba(199, 198, 202, 0.1) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(199, 198, 202, 0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-
-  .blueprint-grid-dot {
-    background-image: radial-gradient(circle, #c7c6ca 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.1;
-  }
-
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f9f9fb;
+  background: #f5fcef;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #8d4f00, #000000);
-  border-radius: 0;
+  background: linear-gradient(180deg, #3b6934, #154212);
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #c26f00, #1a1c1d);
+  background: linear-gradient(180deg, #2d5a27, #154212);
 }

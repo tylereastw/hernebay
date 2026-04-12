@@ -1,59 +1,33 @@
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Icon } from './components/Icon';
 import Home from './pages/Home';
 import SkipSizes from './pages/SkipSizes';
 
-const navItems = [
-  { label: 'HOME', path: '/', icon: 'home_pin' },
-  { label: 'SKIPS', path: '/skips', icon: 'view_in_ar' },
-  { label: 'BOOKING', path: '/#cta', icon: 'calendar_today' },
-];
-
-const footerLinks = [
-  { label: 'Sizing Guide', path: '/skips' },
-  { label: 'Contact', path: '/#cta' },
-  { label: 'Permit Info', path: '/skips' },
-];
-
 function Layout() {
-  const location = useLocation();
-  const currentPath = location.pathname;
-  const isHome = currentPath === '/';
-
   return (
-    <div className="bg-background font-body text-on-surface selection:bg-surface-tint selection:text-white">
-      {/* Header */}
-      <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-stone-50/80 backdrop-blur-xl border-b-2 border-stone-950">
-        <Link to="/" className="flex items-center gap-2">
-          <Icon name="architecture" className="text-stone-950" />
-          <span className="text-lg font-black tracking-tighter text-stone-950 font-headline uppercase">
-            LONG EATON SKIPS (NO VAT)
-          </span>
-        </Link>
-        {isHome && (
-          <div className="hidden md:flex gap-8 items-center">
-            {navItems.map(({ label, path }) => {
-              const isActive = path === currentPath;
-              return (
-                <Link
-                  key={label}
-                  to={path}
-                  className={`font-headline uppercase tracking-tighter font-bold text-sm px-2 py-1 transition-colors duration-100 ${
-                    isActive
-                      ? 'text-amber-500'
-                      : 'text-stone-500 hover:bg-amber-500 hover:text-stone-950'
-                  }`}
-                >
-                  {label}
-                </Link>
-              );
-            })}
+    <div className="bg-background text-on-background selection:bg-primary-fixed selection:text-primary">
+      {/* TopAppBar */}
+      <nav className="fixed top-0 w-full z-50 bg-emerald-50/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(21,66,18,0.06)]">
+        <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
+          <Link to="/" className="flex items-center gap-2">
+            <Icon name="recycling" className="text-emerald-900 text-[28px]" />
+            <span className="text-xl font-bold tracking-tighter text-emerald-900">
+              LONG EATON SKIPS
+            </span>
+          </Link>
+          <div className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">
+            <Link to="/" className="text-emerald-900 font-bold">Sizes</Link>
+            <a href="#" className="text-emerald-800/70 hover:text-emerald-600 transition-colors">Prices</a>
+            <a href="#" className="text-emerald-800/70 hover:text-emerald-600 transition-colors">Coverage</a>
+            <a href="#" className="text-emerald-800/70 hover:text-emerald-600 transition-colors">Contact</a>
           </div>
-        )}
-        <button className="font-headline uppercase tracking-tighter font-bold text-sm text-stone-950 hover:bg-amber-500 hover:text-stone-950 transition-colors duration-100 px-4 py-2 active:translate-y-[1px]">
-          CONTACT
-        </button>
-      </header>
+          <div className="flex items-center">
+            <span className="bg-secondary text-on-secondary px-4 py-1 rounded-full text-[10px] font-black tracking-widest uppercase">
+              NO VAT
+            </span>
+          </div>
+        </div>
+      </nav>
 
       {/* Page Content */}
       <Routes>
@@ -62,62 +36,45 @@ function Layout() {
       </Routes>
 
       {/* Footer */}
-      <footer className="w-full px-6 py-12 flex flex-col gap-8 bg-stone-900 text-stone-50 border-t-4 border-stone-950">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <Link to="/" className="flex items-center gap-4">
-            <Icon name="architecture" className="text-4xl text-amber-500" />
-            <span className="text-amber-500 font-bold tracking-tighter font-headline text-2xl uppercase">
-              LONG EATON SKIPS
-            </span>
+      <footer className="w-full pt-12 pb-32 bg-emerald-100">
+        <div className="flex flex-col items-center text-center px-8 gap-6 w-full">
+          <Link to="/" className="flex items-center gap-2">
+            <Icon name="recycling" className="text-emerald-900 text-[24px]" />
+            <span className="text-lg font-black text-emerald-900">LONG EATON SKIPS</span>
           </Link>
-          <div className="flex flex-wrap gap-6 font-headline text-[12px] leading-tight tracking-tight">
-            {footerLinks.map(({ label, path }) => (
-              <Link
-                key={label}
-                to={path}
-                className="text-stone-400 hover:text-amber-400 transition-colors uppercase font-bold border-l-2 border-stone-700 pl-4"
-              >
+          <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+            {['Terms', 'Privacy', 'Coverage', 'WhatsApp Support'].map((label) => (
+              <a key={label} href="#" className="text-emerald-800/80 hover:text-emerald-600 transition-colors text-sm leading-relaxed">
                 {label}
-              </Link>
+              </a>
             ))}
           </div>
-        </div>
-        <div className="flex flex-col md:flex-row justify-between items-end gap-4 border-t border-stone-800 pt-8">
-          <p className="font-headline text-[12px] leading-tight tracking-tight text-stone-500 uppercase">
-            &copy; {new Date().getFullYear()} LONG EATON SKIPS. TECHNICAL
-            SPECIFICATIONS SUBJECT TO CHANGE.
+          <p className="max-w-2xl text-emerald-800/60 text-sm leading-relaxed">
+            &copy; {new Date().getFullYear()} Long Eaton Skips. The Modern Neighbor Service.
+            NO VAT on all domestic skips. Serving Long Eaton, Sandiacre, and surrounding areas.
           </p>
-          <div className="flex gap-4">
-            <span className="bg-amber-500 text-stone-950 px-2 py-1 font-headline font-bold text-[10px] tracking-widest">
-              VAT FREE
-            </span>
-            <span className="border border-stone-700 text-stone-400 px-2 py-1 font-headline font-bold text-[10px] tracking-widest uppercase">
-              NG10 SERVICE AREA
-            </span>
-          </div>
         </div>
       </footer>
 
       {/* Mobile Bottom Nav */}
-      <nav className="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-stretch h-16 bg-stone-50 border-t-2 border-stone-950">
-        {navItems.map(({ label, path, icon }) => {
-          const isActive = path === currentPath;
-          return (
-            <Link
-              key={label}
-              to={path}
-              className={`flex flex-col items-center justify-center h-full w-full px-2 active:scale-95 duration-75 transition-all font-headline font-bold text-[10px] tracking-widest uppercase ${
-                isActive
-                  ? 'bg-amber-500 text-stone-950'
-                  : 'text-stone-500 hover:bg-stone-200'
-              }`}
-            >
-              <Icon name={icon} />
-              <span>{label}</span>
-            </Link>
-          );
-        })}
-      </nav>
+      <div className="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-emerald-50 shadow-[0_-10px_40px_rgba(21,66,18,0.08)] rounded-t-[3rem]">
+        <Link to="/skips" className="flex flex-col items-center justify-center text-emerald-800 opacity-60 hover:opacity-100 active:scale-90 transition-all">
+          <Icon name="straighten" />
+          <span className="text-[11px] font-semibold uppercase tracking-wider mt-1">Sizes</span>
+        </Link>
+        <a href="#" className="flex flex-col items-center justify-center text-emerald-800 opacity-60 hover:opacity-100 active:scale-90 transition-all">
+          <Icon name="payments" />
+          <span className="text-[11px] font-semibold uppercase tracking-wider mt-1">Prices</span>
+        </a>
+        <Link to="/skips" className="flex flex-col items-center justify-center bg-yellow-400 text-emerald-950 rounded-full px-6 py-2 active:scale-90 transition-all">
+          <Icon name="calendar_month" />
+          <span className="text-[11px] font-semibold uppercase tracking-wider mt-1">Book</span>
+        </Link>
+        <a href="#" className="flex flex-col items-center justify-center text-emerald-800 opacity-60 hover:opacity-100 active:scale-90 transition-all">
+          <Icon name="chat" />
+          <span className="text-[11px] font-semibold uppercase tracking-wider mt-1">Contact</span>
+        </a>
+      </div>
     </div>
   );
 }
