@@ -146,7 +146,7 @@ export default function SkipSizes() {
               <Icon name="call" />
               Speak to an Expert
             </a>
-            <a href="https://wa.me/447858797922" className="bg-tertiary-container text-tertiary-fixed px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
+            <a href="https://wa.me/447470300853" className="bg-tertiary-container text-tertiary-fixed px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
               <Icon name="chat" />
               WhatsApp Support
             </a>

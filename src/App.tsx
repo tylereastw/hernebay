@@ -82,7 +82,7 @@ function Layout() {
           <span className="text-[10px] font-bold uppercase tracking-widest mt-1">Call</span>
         </a>
         <a
-          href="https://wa.me/447858797922"
+          href="https://wa.me/447470300853"
           className="flex flex-col items-center justify-center text-[#171d16] p-3 hover:bg-[#e9f0e4] rounded-full transition-transform active:scale-90"
         >
           <InlineIcon name="chat" />

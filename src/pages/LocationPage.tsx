@@ -88,7 +88,7 @@ export default function LocationPage() {
               07782 222 906
             </a>
             <a
-              href="https://wa.me/447858797922"
+              href="https://wa.me/447470300853"
               className="px-8 py-4 bg-tertiary-container text-tertiary-fixed rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2"
             >
               <Icon name="chat" />
