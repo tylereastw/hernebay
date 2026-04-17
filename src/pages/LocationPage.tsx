@@ -4,10 +4,9 @@ import { Icon } from '../components/Icon';
 import { locations } from '../data/locations';
 
 const skipPricing = [
-  { name: '2-Yard Mini Skip', bags: '~20-30 bin bags', price: '£120' },
-  { name: '4-Yard Midi Skip', bags: '~40-50 bin bags', price: '£185' },
-  { name: '8-Yard Builders Skip', bags: '~80-90 bin bags', price: '£260' },
-  { name: '12-Yard Large Skip', bags: '~120 bin bags', price: '£345' },
+  { name: '5-Yard Skip', bags: '~40-50 bin bags', price: '£326' },
+  { name: '8-Yard Builders Skip', bags: '~80-90 bin bags', price: '£386' },
+  { name: '12-Yard Large Skip', bags: '~120 bin bags', price: '£472' },
 ];
 
 export default function LocationPage() {
