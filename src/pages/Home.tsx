@@ -2,30 +2,23 @@ import { Icon } from '../components/Icon';
 
 const skipCatalog = [
   {
-    name: '2-Yard Mini Skip',
-    capacity: 'Fits ~20-30 bin bags',
-    price: '£120.00',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBWGWn0xyMgjqkU48PhZzgTg2IkngjQMk1b0BEDne-2coDX8X5PLAPwHjCY_OO4Osa4hEpGF_YF9KCjCj2dVkXOuFLirzY7OBNaoaDVnYvt0ujT9uDV8jmzM38rq5pu1alWTPy6E5lGm9SFg51WKcHhdrOlIzvDapdL3lEYfLycALL0l-IJUnGvLM05Kwl83A0eLp2Wk49VBRkdyyUUtqymwynerjI5BwppwMO2_Re95iFhkKitsA_h0u_ycNO1k0R21eEni90iUas',
-    popular: false,
-  },
-  {
-    name: '4-Yard Midi Skip',
+    name: '5-Yard Skip',
     capacity: 'Fits ~40-50 bin bags',
-    price: '£185.00',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuATTMAKflCsRpoM_J33CgziooulSi78L0Go8ZP9APr180iKyJtCYNyaOQwX6X6vceCGY7aOUtxHEUt7s6koE4QSr8CuAjPgOar6VJIWSlB5796hR2ELtDtQCMgr-BrTne0RE2Bqfl8umS-PGZXa7VPrw6kCVYyECzxSoskpqheAeaCR3bLZPG1MXjAq24HBytj1PSxkzXcZXqW_snstG1iXSiBQTsVEnRY8qSD758ws_l28J9qMOgTYRRwCkEw4DaFj8ZTS34U_-Js',
+    price: '£326',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBWGWn0xyMgjqkU48PhZzgTg2IkngjQMk1b0BEDne-2coDX8X5PLAPwHjCY_OO4Osa4hEpGF_YF9KCjCj2dVkXOuFLirzY7OBNaoaDVnYvt0ujT9uDV8jmzM38rq5pu1alWTPy6E5lGm9SFg51WKcHhdrOlIzvDapdL3lEYfLycALL0l-IJUnGvLM05Kwl83A0eLp2Wk49VBRkdyyUUtqymwynerjI5BwppwMO2_Re95iFhkKitsA_h0u_ycNO1k0R21eEni90iUas',
     popular: false,
   },
   {
     name: '8-Yard Builders Skip',
     capacity: 'Fits ~80-90 bin bags',
-    price: '£260.00',
+    price: '£386',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBEPpL8--7fPSknz5h_sV7Slg4CppjWvWfnPSNJrBaVdQvfj5TKEpCmiHIPRJJSmVegnYF38wAEBg3fPNZjgCmv4o1GtXTt7j3wQgiY1_v9Dw7ReNHsGB4Ws6B7A-tmiV7h3lytuL3dBJ6hlyjnLifVbY0Lvgs2Ywlx7cnPGyGRf2u5li8SpLaGPoEakLy4bv2UiuqZlRQwOhz5DIC8hcm1xr5SQHutI5PgSXlUarovZJR5xy1u241gS5i23PlBzkXCPIPFUK2s2t0',
     popular: true,
   },
   {
     name: '12-Yard Large Skip',
     capacity: 'Fits ~120 bin bags',
-    price: '£345.00',
+    price: '£472',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQCLcrkNNtkzgqleorBi23CRQOTEyFSPjX6YR8j654aMFJXjO_-wpjIZwdltI_mW7sjNUl-cwaYQa9sodVUr_ku-NeT8OgKlyx-yXm41vLpN3-T8x7x-UnLQFNhn_XLZs68CAgNA-mWNwWg7H66k1JjhoHpnwD71Cb_ZsmtKCCoF-hy1iR7N847v_HFZboqwn_iRa28okIYnE0nGNjfbKgOsvxnZhaDNjScdCIVWvZuJCIqCrHNjTReuBT_IgDywryY4Hq5C7U2Y0',
     popular: false,
   },
@@ -73,7 +66,7 @@ export default function Home() {
                 <Icon name="call" />
                 Call Now
               </a>
-              <a href="https://wa.me/447858797922" className="px-8 py-4 bg-tertiary-container text-tertiary-fixed rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
+              <a href="https://wa.me/447470300853" className="px-8 py-4 bg-tertiary-container text-tertiary-fixed rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
                 <Icon name="chat" />
                 WhatsApp
               </a>

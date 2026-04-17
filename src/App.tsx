@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { Icon } from './components/Icon';
+import { InlineIcon } from './components/InlineIcon';
 import Home from './pages/Home';
 import SkipSizes from './pages/SkipSizes';
 import ServicePage from './pages/ServicePage';
@@ -12,7 +12,7 @@ function Layout() {
       <header className="fixed top-0 w-full z-50 bg-[#f5fcef]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(21,66,18,0.06)]">
         <nav className="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-2">
-            <Icon name="recycling" className="text-[#154212] text-2xl" />
+            <InlineIcon name="recycling" className="text-[#154212]" size={28} />
             <span className="text-xl font-black text-[#154212] tracking-tighter">
               NO VAT SKIPS
             </span>
@@ -30,7 +30,7 @@ function Layout() {
           </div>
           <div className="flex items-center gap-4">
             <a href="tel:07782222906" className="hidden sm:flex items-center gap-2 text-[#154212] font-bold text-sm">
-              <Icon name="phone" className="text-lg" />
+              <InlineIcon name="phone" size={18} />
               07782 222 906
             </a>
             <a href="http://zipskips.co.uk/?location=long-eaton" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full font-bold text-sm active:scale-95 duration-200 shadow-lg hover:opacity-90 transition-all">
@@ -53,7 +53,7 @@ function Layout() {
         <div className="w-full flex flex-col items-center text-center px-8 max-w-7xl mx-auto">
           <div className="mb-12 space-y-4">
             <Link to="/" className="flex items-center justify-center gap-2 mb-2">
-              <Icon name="recycling" className="text-3xl" />
+              <InlineIcon name="recycling" size={32} />
               <span className="text-lg font-bold text-[#154212]">NO VAT SKIPS</span>
             </Link>
             <p className="text-sm leading-relaxed max-w-md opacity-80">
@@ -78,21 +78,21 @@ function Layout() {
           href="tel:07782222906"
           className="flex flex-col items-center justify-center text-[#171d16] p-3 hover:bg-[#e9f0e4] rounded-full transition-transform active:scale-90"
         >
-          <Icon name="phone" />
+          <InlineIcon name="phone" />
           <span className="text-[10px] font-bold uppercase tracking-widest mt-1">Call</span>
         </a>
         <a
-          href="https://wa.me/447858797922"
+          href="https://wa.me/447470300853"
           className="flex flex-col items-center justify-center text-[#171d16] p-3 hover:bg-[#e9f0e4] rounded-full transition-transform active:scale-90"
         >
-          <Icon name="chat" />
+          <InlineIcon name="chat" />
           <span className="text-[10px] font-bold uppercase tracking-widest mt-1">WhatsApp</span>
         </a>
         <a
           href="#catalog"
           className="flex flex-col items-center justify-center bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white rounded-full p-3 shadow-lg transition-transform active:scale-90"
         >
-          <Icon name="calendar_month" />
+          <InlineIcon name="calendar_month" />
           <span className="text-[10px] font-bold uppercase tracking-widest mt-1">Book</span>
         </a>
       </div>

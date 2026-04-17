@@ -77,7 +77,7 @@ export const services: Record<string, ServiceData> = {
     benefits: [
       { icon: 'business', title: 'Trade Accounts', description: 'Set up a trade account for regular collections with simplified invoicing. Ideal for builders and contractors working across multiple sites.' },
       { icon: 'autorenew', title: 'Regular Collections', description: 'Schedule recurring skip deliveries and collections to keep your site compliant and clutter-free throughout your project.' },
-      { icon: 'straighten', title: 'All Sizes Available', description: 'From 2-yard mini skips for small trade jobs to 12-yard large skips for major construction projects. We have every size covered.' },
+      { icon: 'straighten', title: 'All Sizes Available', description: 'From 5-yard skips for medium jobs to 12-yard large skips for major construction projects. We have every size covered.' },
     ],
     details: {
       heading: 'Waste Management for Professionals',
