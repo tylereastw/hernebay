@@ -110,15 +110,18 @@ export default function SkipSizes() {
                 <span className="text-4xl font-black text-primary">{skip.price}</span>
                 <span className="text-on-surface-variant font-bold text-sm">TOTAL</span>
               </div>
-              <button
-                className={`w-full py-4 rounded-full font-bold text-sm tracking-wide active:scale-95 transition-all ${
+              <a
+                href="http://zipskips.co.uk/?location=long-eaton"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block w-full py-4 rounded-full font-bold text-sm tracking-wide active:scale-95 transition-all text-center ${
                   skip.popular
                     ? 'bg-gradient-to-br from-primary to-primary-container text-on-primary shadow-lg'
                     : 'bg-primary text-on-primary'
                 }`}
               >
                 Select Size
-              </button>
+              </a>
             </div>
           </div>
         ))}
@@ -139,14 +142,14 @@ export default function SkipSizes() {
             the 8-yard Builders Skip for its structural integrity.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
+            <a href="tel:07782222906" className="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
               <Icon name="call" />
               Speak to an Expert
-            </button>
-            <button className="bg-tertiary-container text-tertiary-fixed px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
+            </a>
+            <a href="https://wa.me/447858797922" className="bg-tertiary-container text-tertiary-fixed px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 transition-transform active:scale-90">
               <Icon name="chat" />
               WhatsApp Support
-            </button>
+            </a>
           </div>
         </div>
       </section>
