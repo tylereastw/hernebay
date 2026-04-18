@@ -12,7 +12,7 @@ function Layout() {
       <header className="fixed top-0 w-full z-50 bg-[#f5fcef]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(21,66,18,0.06)]">
         <nav className="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-2">
-            <InlineIcon name="recycling" className="text-[#154212]" size={28} />
+            <span className="text-2xl leading-none" aria-hidden="true">♻️</span>
             <span className="text-xl font-black text-[#154212] tracking-tighter">
               NO VAT SKIPS
             </span>
@@ -53,7 +53,7 @@ function Layout() {
         <div className="w-full flex flex-col items-center text-center px-8 max-w-7xl mx-auto">
           <div className="mb-12 space-y-4">
             <Link to="/" className="flex items-center justify-center gap-2 mb-2">
-              <InlineIcon name="recycling" size={32} />
+              <span className="text-2xl leading-none" aria-hidden="true">♻️</span>
               <span className="text-lg font-bold text-[#154212]">NO VAT SKIPS</span>
             </Link>
             <p className="text-sm leading-relaxed max-w-md opacity-80">

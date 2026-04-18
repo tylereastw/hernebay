@@ -1,15 +1,9 @@
 // Critical icons rendered as inline SVG so they render instantly on first paint
 // without waiting for the Material Symbols font to download.
 
-type Name = 'recycling' | 'phone' | 'chat' | 'calendar_month';
+type Name = 'phone' | 'chat' | 'calendar_month';
 
 const paths: Record<Name, JSX.Element> = {
-  recycling: (
-    <path
-      fill="currentColor"
-      d="M5.24 15.33 3.87 15.7l-2.33-4.04 3.63-6.29 2.6 1.5-1.49 2.58 2.98 1.72-1 1.73H5.58l1.46 2.53-1.8.9zm4.47 3.17-.68 1.25H4.87l-2.12-3.68 1.74-1 1.74 3h3.48zM19.1 21h-6.6v-3h5.44l1.75-3 1.73 1zm-3.96-11.29-2.35 1.36V6l7.27 4.2-1 1.73-2.6-1.5-2.61 4.52-1.73-1zM8.54 5.15 11.5 0h4.66L18.3 3.67l-1.74 1-1.56-2.67h-3.92L9.41 6.65z"
-    />
-  ),
   phone: (
     <path
       fill="currentColor"
