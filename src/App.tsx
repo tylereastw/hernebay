@@ -12,7 +12,7 @@ function Layout() {
       <header className="fixed top-0 w-full z-50 bg-[#f5fcef]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(21,66,18,0.06)]">
         <nav className="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-2">
-            <InlineIcon name="recycling" className="text-[#154212]" size={28} />
+            <span className="text-2xl leading-none" aria-hidden="true">♻️</span>
             <span className="text-xl font-black text-[#154212] tracking-tighter">
               NO VAT SKIPS
             </span>
@@ -50,25 +50,59 @@ function Layout() {
 
       {/* Footer */}
       <footer className="w-full pt-16 pb-32 bg-[#e9f0e4] text-[#154212]">
-        <div className="w-full flex flex-col items-center text-center px-8 max-w-7xl mx-auto">
-          <div className="mb-12 space-y-4">
-            <Link to="/" className="flex items-center justify-center gap-2 mb-2">
-              <InlineIcon name="recycling" size={32} />
-              <span className="text-lg font-bold text-[#154212]">NO VAT SKIPS</span>
+        <div className="w-full max-w-7xl mx-auto px-8 grid gap-10 md:grid-cols-4">
+          {/* Brand + NAP */}
+          <div className="md:col-span-2 space-y-4">
+            <Link to="/" className="flex items-center gap-2">
+              <span className="text-2xl leading-none" aria-hidden="true">♻️</span>
+              <span className="text-lg font-bold text-[#154212]">LONG EATON SKIPS</span>
             </Link>
             <p className="text-sm leading-relaxed max-w-md opacity-80">
-              Premium domestic skip hire for Long Eaton and surrounding areas.
-              Professional, family-run, and VAT-free for homeowners.
+              Family-run skip hire serving Long Eaton and surrounding areas since 2015.
+              Licensed waste carrier, professional service, and no VAT for domestic customers.
             </p>
+            <address className="not-italic text-sm space-y-1 opacity-90">
+              <div className="font-bold">Long Eaton Skips</div>
+              <div>Long Eaton, Nottinghamshire NG10, United Kingdom</div>
+              <div>
+                Phone: <a href="tel:07782222906" className="underline hover:opacity-80">07782 222 906</a>
+              </div>
+              <div>
+                WhatsApp: <a href="https://wa.me/447470300853" className="underline hover:opacity-80">07470 300 853</a>
+              </div>
+              <div>Hours: Mon–Sat 7:30 – 17:30</div>
+            </address>
           </div>
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <a href="#" className="text-[#154212] underline hover:text-[#154212] transition-colors">Terms</a>
-            <a href="#" className="text-[#171d16]/60 hover:text-[#154212] transition-colors">Privacy</a>
-            <a href="#" className="text-[#171d16]/60 hover:text-[#154212] transition-colors">Service Areas</a>
+
+          {/* Services */}
+          <div className="space-y-3">
+            <h3 className="font-bold uppercase tracking-widest text-xs">Services</h3>
+            <ul className="space-y-2 text-sm opacity-80">
+              <li><Link to="/skips" className="hover:opacity-60">Skip Sizes</Link></li>
+              <li><Link to="/grab-hire" className="hover:opacity-60">Grab Hire</Link></li>
+              <li><Link to="/wait-and-load-skip-hire" className="hover:opacity-60">Wait &amp; Load</Link></li>
+              <li><Link to="/commercial-skip-hire" className="hover:opacity-60">Commercial Skip Hire</Link></li>
+              <li><Link to="/rubbish-clearance" className="hover:opacity-60">Rubbish Clearance</Link></li>
+            </ul>
           </div>
-          <p className="text-sm leading-relaxed opacity-60">
-            &copy; {new Date().getFullYear()} The Editorial Skip Service. No VAT on all domestic hires.
-          </p>
+
+          {/* Areas Covered */}
+          <div className="space-y-3">
+            <h3 className="font-bold uppercase tracking-widest text-xs">Areas Covered</h3>
+            <ul className="space-y-2 text-sm opacity-80">
+              <li><Link to="/skip-hire/long-eaton" className="hover:opacity-60">Skip Hire Long Eaton</Link></li>
+              <li><Link to="/skip-hire/nottingham" className="hover:opacity-60">Skip Hire Nottingham</Link></li>
+              <li><Link to="/skip-hire/derby" className="hover:opacity-60">Skip Hire Derby</Link></li>
+            </ul>
+            <div className="pt-4 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1 bg-white/60 text-[#154212] px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">
+                Licensed Waste Carrier
+              </span>
+              <span className="inline-flex items-center gap-1 bg-white/60 text-[#154212] px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">
+                NO VAT
+              </span>
+            </div>
+          </div>
         </div>
       </footer>
 
