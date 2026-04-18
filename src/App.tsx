@@ -66,9 +66,6 @@ function Layout() {
             <a href="#" className="text-[#171d16]/60 hover:text-[#154212] transition-colors">Privacy</a>
             <a href="#" className="text-[#171d16]/60 hover:text-[#154212] transition-colors">Service Areas</a>
           </div>
-          <p className="text-sm leading-relaxed opacity-60">
-            &copy; {new Date().getFullYear()} The Editorial Skip Service. No VAT on all domestic hires.
-          </p>
         </div>
       </footer>
 
