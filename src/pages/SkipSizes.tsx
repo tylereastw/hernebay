@@ -1,4 +1,5 @@
 import { Icon } from '../components/Icon';
+import { usePageMeta } from '../components/PageMeta';
 
 const skips = [
   {
@@ -34,6 +35,11 @@ const skips = [
 ];
 
 export default function SkipSizes() {
+  usePageMeta(
+    'Skip Sizes & Prices | 5, 8 & 12 Yard Skips | No VAT | Long Eaton Skips',
+    'Compare skip sizes and prices. 5-yard £326, 8-yard £386, 12-yard £472 — all inc. delivery, no VAT. Choose the right skip for your project in Long Eaton and surrounding areas.'
+  );
+
   return (
     <main className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
       {/* Hero */}

@@ -2,6 +2,7 @@ export interface ServiceData {
   slug: string;
   title: string;
   metaTitle: string;
+  metaDescription: string;
   heroTag: string;
   heroHeading: string;
   heroHighlight: string;
@@ -16,7 +17,8 @@ export const services: Record<string, ServiceData> = {
   'grab-hire': {
     slug: 'grab-hire',
     title: 'Grab Hire',
-    metaTitle: 'Grab Hire Long Eaton | Same Day Grab Lorry | No VAT',
+    metaTitle: 'Grab Hire Long Eaton | Grab Lorry Service | No VAT',
+    metaDescription: 'Grab hire in Long Eaton — no skip needed. Our grab lorry collects soil, rubble & green waste directly from your site. No permit required, no VAT. Call today.',
     heroTag: 'Grab Lorry Service',
     heroHeading: 'Grab Hire.',
     heroHighlight: 'No Skips Needed.',
@@ -43,6 +45,7 @@ export const services: Record<string, ServiceData> = {
     slug: 'wait-and-load-skip-hire',
     title: 'Wait & Load Skip Hire',
     metaTitle: 'Wait and Load Skip Hire Long Eaton | No Permit Needed | No VAT',
+    metaDescription: 'Wait and load skip hire in Long Eaton. We bring the skip, wait while you load, and take it away — no permit needed. No VAT on domestic hires. Book today.',
     heroTag: 'Wait & Load Service',
     heroHeading: 'Wait & Load.',
     heroHighlight: 'No Permit. No Fuss.',
@@ -69,6 +72,7 @@ export const services: Record<string, ServiceData> = {
     slug: 'commercial-skip-hire',
     title: 'Commercial Skip Hire',
     metaTitle: 'Commercial Skip Hire Long Eaton | Trade & Business Waste | No VAT',
+    metaDescription: 'Commercial skip hire for builders, contractors & businesses in Long Eaton. Trade accounts, regular collections, all sizes available. No VAT on domestic hires.',
     heroTag: 'Trade & Business Waste',
     heroHeading: 'Commercial Skip Hire.',
     heroHighlight: 'Built for Business.',
@@ -95,6 +99,7 @@ export const services: Record<string, ServiceData> = {
     slug: 'rubbish-clearance',
     title: 'Rubbish Clearance',
     metaTitle: 'Rubbish Clearance Long Eaton | House & Garden Clearance | No VAT',
+    metaDescription: 'Professional rubbish clearance in Long Eaton. We handle house clearances, garden clearances & general waste removal. Full labour included, no VAT. Get a free quote.',
     heroTag: 'Full Clearance Service',
     heroHeading: 'Rubbish Clearance.',
     heroHighlight: 'We Do The Lifting.',

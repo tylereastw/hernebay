@@ -1,15 +1,16 @@
-import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Icon } from '../components/Icon';
+import { usePageMeta } from '../components/PageMeta';
 import { services } from '../data/services';
 
 export default function ServicePage() {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? services[slug] : null;
 
-  useEffect(() => {
-    if (service) document.title = service.metaTitle;
-  }, [service]);
+  usePageMeta(
+    service?.metaTitle ?? 'Service Not Found | Long Eaton Skips',
+    service?.metaDescription ?? ''
+  );
 
   if (!service) {
     return (
