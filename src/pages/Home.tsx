@@ -1,4 +1,5 @@
 import { Icon } from '../components/Icon';
+import { usePageMeta } from '../components/PageMeta';
 
 const skipCatalog = [
   {
@@ -40,6 +41,11 @@ const faqs = [
 ];
 
 export default function Home() {
+  usePageMeta(
+    'Skip Hire Long Eaton | No VAT | From £326 | Long Eaton Skips',
+    'Affordable skip hire in Long Eaton with NO VAT. 5, 8 & 12 yard skips from £326 inc. delivery. Family-run, reliable service covering Long Eaton, Sandiacre, Breaston & surrounding areas.'
+  );
+
   return (
     <main className="pt-24">
       {/* Hero */}

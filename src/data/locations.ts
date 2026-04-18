@@ -2,6 +2,7 @@ export interface LocationData {
   slug: string;
   name: string;
   metaTitle: string;
+  metaDescription: string;
   heroDescription: string;
   areas: string[];
   postcodes: string[];
@@ -13,6 +14,7 @@ export const locations: Record<string, LocationData> = {
     slug: 'long-eaton',
     name: 'Long Eaton',
     metaTitle: 'Skip Hire Long Eaton | From £326 | No VAT | Local Delivery',
+    metaDescription: 'Local skip hire in Long Eaton from £326 inc. delivery. No VAT — save 20%. 5, 8 & 12 yard skips for domestic & commercial projects. Covering NG10, Sawley, Sandiacre & Breaston.',
     heroDescription: 'Family-run skip hire serving Long Eaton and surrounding areas. Competitive prices with no VAT on domestic hires. 5-yard, 8-yard, and 12-yard skips available for your project.',
     areas: ['Sawley', 'Sandiacre', 'Breaston', 'Toton', 'Chilwell', 'Attenborough'],
     postcodes: ['NG10', 'NG9'],
@@ -27,6 +29,7 @@ export const locations: Record<string, LocationData> = {
     slug: 'nottingham',
     name: 'Nottingham',
     metaTitle: 'Skip Hire Nottingham | From £326 | No VAT | Reliable Service',
+    metaDescription: 'Skip hire in Nottingham from £326 inc. delivery. No VAT on domestic hires — save 20%. Covering Beeston, West Bridgford, Arnold, Carlton & all NG postcodes.',
     heroDescription: 'Affordable skip hire across Nottingham and surrounding areas. No VAT on all domestic hires means you save 20% instantly. Professional, reliable service from a trusted local company.',
     areas: ['Beeston', 'West Bridgford', 'Arnold', 'Carlton', 'Bulwell', 'Gedling'],
     postcodes: ['NG1', 'NG2', 'NG3', 'NG5', 'NG7', 'NG9'],
@@ -41,6 +44,7 @@ export const locations: Record<string, LocationData> = {
     slug: 'derby',
     name: 'Derby',
     metaTitle: 'Skip Hire Derby | From £326 | No VAT | Fast Delivery',
+    metaDescription: 'Skip hire in Derby from £326 inc. delivery. No VAT — save 20% on domestic hires. Covering Spondon, Chellaston, Allestree, Mickleover & all DE postcodes.',
     heroDescription: 'Quality skip hire in Derby with no VAT on domestic hires. Save 20% on every booking. Local, reliable service with flexible scheduling to suit your project needs.',
     areas: ['Spondon', 'Chaddesden', 'Chellaston', 'Allestree', 'Mickleover', 'Littleover'],
     postcodes: ['DE1', 'DE21', 'DE22', 'DE23', 'DE24', 'DE72'],

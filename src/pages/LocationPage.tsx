@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Icon } from '../components/Icon';
+import { usePageMeta } from '../components/PageMeta';
 import { locations } from '../data/locations';
 
 const skipPricing = [
@@ -13,9 +13,10 @@ export default function LocationPage() {
   const { location } = useParams<{ location: string }>();
   const loc = location ? locations[location] : null;
 
-  useEffect(() => {
-    if (loc) document.title = loc.metaTitle;
-  }, [loc]);
+  usePageMeta(
+    loc?.metaTitle ?? 'Location Not Found | Long Eaton Skips',
+    loc?.metaDescription ?? ''
+  );
 
   if (!loc) {
     return (
