@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Icon } from '../components/Icon';
 import { usePageMeta } from '../components/PageMeta';
 
@@ -41,14 +40,10 @@ export default function SkipSizes() {
     'Compare skip sizes and prices. 5-yard £326, 8-yard £386, 12-yard £472 — all inc. delivery, no VAT. Choose the right skip for your project in Long Eaton and surrounding areas.'
   );
 
-  const [postcode, setPostcode] = useState('');
-  const [address, setAddress] = useState('');
-  const [email, setEmail] = useState('');
-
   return (
     <main className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
       {/* Hero */}
-      <section className="mb-16 text-center md:text-left md:flex items-center justify-between gap-12">
+      <section className="mb-20 text-center md:text-left md:flex items-center justify-between gap-12">
         <div className="md:w-1/2">
           <span className="inline-block bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full font-bold text-[11px] uppercase tracking-widest mb-6">
             Local Service Specialists
@@ -73,66 +68,7 @@ export default function SkipSizes() {
         </div>
       </section>
 
-      {/* Delivery Info */}
-      <section className="mb-16 bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-sm border border-outline-variant/10">
-        <div className="flex items-center gap-3 mb-6">
-          <Icon name="local_shipping" className="text-primary text-2xl" />
-          <h2 className="text-2xl font-extrabold tracking-tight text-on-surface">
-            Delivery Details
-          </h2>
-        </div>
-        <p className="text-on-surface-variant mb-8">
-          Tell us where you need the skip delivered, then choose your size below.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div>
-            <label htmlFor="postcode" className="block text-sm font-bold text-on-surface mb-2">
-              Postcode <span className="text-error">*</span>
-            </label>
-            <input
-              id="postcode"
-              type="text"
-              required
-              placeholder="e.g. NG10 1AA"
-              value={postcode}
-              onChange={(e) => setPostcode(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-            />
-          </div>
-          <div>
-            <label htmlFor="address" className="block text-sm font-bold text-on-surface mb-2">
-              Street Address <span className="text-error">*</span>
-            </label>
-            <input
-              id="address"
-              type="text"
-              required
-              placeholder="e.g. 12 High Street"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-bold text-on-surface mb-2">
-              Email <span className="text-outline text-xs font-normal">(optional)</span>
-            </label>
-            <input
-              id="email"
-              type="email"
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Skip Cards */}
-      <h2 className="text-3xl font-extrabold tracking-tight text-on-surface mb-8">
-        Select Your Skip Size
-      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {skips.map((skip) => (
           <div
@@ -181,7 +117,7 @@ export default function SkipSizes() {
                 <span className="text-on-surface-variant font-bold text-sm">TOTAL</span>
               </div>
               <a
-                href={`http://zipskips.co.uk/?location=long-eaton${postcode ? `&postcode=${encodeURIComponent(postcode)}` : ''}${address ? `&address=${encodeURIComponent(address)}` : ''}${email ? `&email=${encodeURIComponent(email)}` : ''}`}
+                href="http://zipskips.co.uk/?location=long-eaton"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full py-4 rounded-full font-bold text-sm tracking-wide active:scale-95 transition-all text-center ${
