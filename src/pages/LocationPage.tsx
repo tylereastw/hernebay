@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { Icon } from '../components/Icon';
 import { usePageMeta } from '../components/PageMeta';
+import { trackBookingClick } from '../lib/tracking';
 import { locations } from '../data/locations';
 
 const skipPricing = [
@@ -73,7 +74,7 @@ export default function LocationPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="http://zipskips.co.uk/?location=long-eaton"
+              onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform"
@@ -115,7 +116,7 @@ export default function LocationPage() {
                 <p className="text-3xl font-black text-primary">{skip.price}</p>
                 <p className="text-xs text-on-surface-variant font-bold">Inc. delivery &middot; No VAT</p>
                 <a
-                  href="http://zipskips.co.uk/?location=long-eaton"
+                  onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-3 bg-surface-container text-on-surface font-bold rounded-full hover:bg-primary hover:text-white transition-colors"
@@ -191,7 +192,7 @@ export default function LocationPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="http://zipskips.co.uk/?location=long-eaton"
+              onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-primary rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform"
