@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { Icon } from '../components/Icon';
 import { usePageMeta } from '../components/PageMeta';
+import { trackBookingClick } from '../lib/tracking';
 import { services } from '../data/services';
 
 export default function ServicePage() {
@@ -74,7 +75,7 @@ export default function ServicePage() {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href="http://zipskips.co.uk/?location=long-eaton"
+                onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform"
@@ -180,7 +181,7 @@ export default function ServicePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="http://zipskips.co.uk/?location=long-eaton"
+              onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-primary rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform"

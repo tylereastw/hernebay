@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { InlineIcon } from './components/InlineIcon';
+import { trackBookingClick } from './lib/tracking';
 import Home from './pages/Home';
 import SkipSizes from './pages/SkipSizes';
 import ServicePage from './pages/ServicePage';
@@ -33,7 +34,7 @@ function Layout() {
               <InlineIcon name="phone" size={18} />
               07782 222 906
             </a>
-            <a href="http://zipskips.co.uk/?location=long-eaton" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full font-bold text-sm active:scale-95 duration-200 shadow-lg hover:opacity-90 transition-all">
+            <a onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full font-bold text-sm active:scale-95 duration-200 shadow-lg hover:opacity-90 transition-all">
               Book Now
             </a>
           </div>

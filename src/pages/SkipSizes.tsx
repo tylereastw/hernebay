@@ -1,5 +1,6 @@
 import { Icon } from '../components/Icon';
 import { usePageMeta } from '../components/PageMeta';
+import { trackBookingClick } from '../lib/tracking';
 
 const skips = [
   {
@@ -117,7 +118,7 @@ export default function SkipSizes() {
                 <span className="text-on-surface-variant font-bold text-sm">TOTAL</span>
               </div>
               <a
-                href="http://zipskips.co.uk/?location=long-eaton"
+                onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full py-4 rounded-full font-bold text-sm tracking-wide active:scale-95 transition-all text-center ${

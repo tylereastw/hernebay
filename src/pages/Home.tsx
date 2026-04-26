@@ -1,5 +1,6 @@
 import { Icon } from '../components/Icon';
 import { usePageMeta } from '../components/PageMeta';
+import { trackBookingClick } from '../lib/tracking';
 
 const skipCatalog = [
   {
@@ -65,7 +66,7 @@ export default function Home() {
               and local expertise you can rely on.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <a href="http://zipskips.co.uk/?location=long-eaton" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform">
+              <a onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform">
                 Book Online
               </a>
               <a href="tel:07782222906" className="px-8 py-4 bg-secondary-container text-on-secondary-container rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
@@ -199,7 +200,7 @@ export default function Home() {
                   </span>
                 </p>
                 <a
-                  href="http://zipskips.co.uk/?location=long-eaton"
+                  onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`block w-full py-3 font-bold rounded-full transition-colors text-center ${
