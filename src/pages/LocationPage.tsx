@@ -15,7 +15,7 @@ export default function LocationPage() {
   const loc = location ? locations[location] : null;
 
   usePageMeta(
-    loc?.metaTitle ?? 'Location Not Found | Long Eaton Skips',
+    loc?.metaTitle ?? 'Location Not Found | Herne Bay Skips',
     loc?.metaDescription ?? ''
   );
 
@@ -34,11 +34,11 @@ export default function LocationPage() {
     name: `Skip Hire ${loc.name}`,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'Long Eaton Skips',
+      name: 'Herne Bay Skips',
       telephone: '07782222906',
       areaServed: loc.name,
     },
-    areaServed: { '@type': 'Place', name: `${loc.name}, East Midlands` },
+    areaServed: { '@type': 'Place', name: `${loc.name}, Kent` },
     description: loc.heroDescription,
   };
 
@@ -74,7 +74,7 @@ export default function LocationPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
+              onClick={trackBookingClick} href="https://zipskips.co.uk/?location=herne-bay"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform"
@@ -116,7 +116,7 @@ export default function LocationPage() {
                 <p className="text-3xl font-black text-primary">{skip.price}</p>
                 <p className="text-xs text-on-surface-variant font-bold">Inc. delivery &middot; No VAT</p>
                 <a
-                  onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
+                  onClick={trackBookingClick} href="https://zipskips.co.uk/?location=herne-bay"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-3 bg-surface-container text-on-surface font-bold rounded-full hover:bg-primary hover:text-white transition-colors"
@@ -192,7 +192,7 @@ export default function LocationPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
+              onClick={trackBookingClick} href="https://zipskips.co.uk/?location=herne-bay"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-primary rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform"

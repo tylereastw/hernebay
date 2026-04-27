@@ -9,7 +9,7 @@ export default function ServicePage() {
   const service = slug ? services[slug] : null;
 
   usePageMeta(
-    service?.metaTitle ?? 'Service Not Found | Long Eaton Skips',
+    service?.metaTitle ?? 'Service Not Found | Herne Bay Skips',
     service?.metaDescription ?? ''
   );
 
@@ -28,11 +28,11 @@ export default function ServicePage() {
     name: service.title,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'Long Eaton Skips',
+      name: 'Herne Bay Skips',
       telephone: '07782222906',
-      areaServed: 'Long Eaton',
+      areaServed: 'Herne Bay',
     },
-    areaServed: { '@type': 'Place', name: 'Long Eaton, Nottinghamshire' },
+    areaServed: { '@type': 'Place', name: 'Herne Bay, Kent' },
     description: service.heroDescription,
   };
 
@@ -75,7 +75,7 @@ export default function ServicePage() {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
+                onClick={trackBookingClick} href="https://zipskips.co.uk/?location=herne-bay"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform"
@@ -181,7 +181,7 @@ export default function ServicePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
+              onClick={trackBookingClick} href="https://zipskips.co.uk/?location=herne-bay"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-primary rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform"

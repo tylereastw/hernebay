@@ -37,8 +37,8 @@ const skips = [
 
 export default function SkipSizes() {
   usePageMeta(
-    'Skip Sizes & Prices | 5, 8 & 12 Yard Skips | No VAT | Long Eaton Skips',
-    'Compare skip sizes and prices. 5-yard £326, 8-yard £386, 12-yard £472 — all inc. delivery, no VAT. Choose the right skip for your project in Long Eaton and surrounding areas.'
+    'Skip Sizes & Prices | 5, 8 & 12 Yard Skips | No VAT | Herne Bay Skips',
+    'Compare skip sizes and prices. 5-yard £326, 8-yard £386, 12-yard £472 — all inc. delivery, no VAT. Choose the right skip for your project in Herne Bay and surrounding areas.'
   );
 
   return (
@@ -118,7 +118,7 @@ export default function SkipSizes() {
                 <span className="text-on-surface-variant font-bold text-sm">TOTAL</span>
               </div>
               <a
-                onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
+                onClick={trackBookingClick} href="https://zipskips.co.uk/?location=herne-bay"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full py-4 rounded-full font-bold text-sm tracking-wide active:scale-95 transition-all text-center ${
