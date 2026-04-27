@@ -17,8 +17,8 @@ export const services: Record<string, ServiceData> = {
   'grab-hire': {
     slug: 'grab-hire',
     title: 'Grab Hire',
-    metaTitle: 'Grab Hire Long Eaton | Grab Lorry Service | No VAT',
-    metaDescription: 'Grab hire in Long Eaton — no skip needed. Our grab lorry collects soil, rubble & green waste directly from your site. No permit required, no VAT. Call today.',
+    metaTitle: 'Grab Hire Herne Bay | Grab Lorry Service | No VAT',
+    metaDescription: 'Grab hire in Herne Bay — no skip needed. Our grab lorry collects soil, rubble & green waste directly from your site. No permit required, no VAT. Call today.',
     heroTag: 'Grab Lorry Service',
     heroHeading: 'Grab Hire.',
     heroHighlight: 'No Skips Needed.',
@@ -44,8 +44,8 @@ export const services: Record<string, ServiceData> = {
   'wait-and-load-skip-hire': {
     slug: 'wait-and-load-skip-hire',
     title: 'Wait & Load Skip Hire',
-    metaTitle: 'Wait and Load Skip Hire Long Eaton | No Permit Needed | No VAT',
-    metaDescription: 'Wait and load skip hire in Long Eaton. We bring the skip, wait while you load, and take it away — no permit needed. No VAT on domestic hires. Book today.',
+    metaTitle: 'Wait and Load Skip Hire Herne Bay | No Permit Needed | No VAT',
+    metaDescription: 'Wait and load skip hire in Herne Bay. We bring the skip, wait while you load, and take it away — no permit needed. No VAT on domestic hires. Book today.',
     heroTag: 'Wait & Load Service',
     heroHeading: 'Wait & Load.',
     heroHighlight: 'No Permit. No Fuss.',
@@ -71,12 +71,12 @@ export const services: Record<string, ServiceData> = {
   'commercial-skip-hire': {
     slug: 'commercial-skip-hire',
     title: 'Commercial Skip Hire',
-    metaTitle: 'Commercial Skip Hire Long Eaton | Trade & Business Waste | No VAT',
-    metaDescription: 'Commercial skip hire for builders, contractors & businesses in Long Eaton. Trade accounts, regular collections, all sizes available. No VAT on domestic hires.',
+    metaTitle: 'Commercial Skip Hire Herne Bay | Trade & Business Waste | No VAT',
+    metaDescription: 'Commercial skip hire for builders, contractors & businesses in Herne Bay. Trade accounts, regular collections, all sizes available. No VAT on domestic hires.',
     heroTag: 'Trade & Business Waste',
     heroHeading: 'Commercial Skip Hire.',
     heroHighlight: 'Built for Business.',
-    heroDescription: 'Reliable waste management for construction sites, trade projects, and commercial premises across Long Eaton and surrounding areas. Regular collections available.',
+    heroDescription: 'Reliable waste management for construction sites, trade projects, and commercial premises across Herne Bay and surrounding areas. Regular collections available.',
     heroImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBEPpL8--7fPSknz5h_sV7Slg4CppjWvWfnPSNJrBaVdQvfj5TKEpCmiHIPRJJSmVegnYF38wAEBg3fPNZjgCmv4o1GtXTt7j3wQgiY1_v9Dw7ReNHsGB4Ws6B7A-tmiV7h3lytuL3dBJ6hlyjnLifVbY0Lvgs2Ywlx7cnPGyGRf2u5li8SpLaGPoEakLy4bv2UiuqZlRQwOhz5DIC8hcm1xr5SQHutI5PgSXlUarovZJR5xy1u241gS5i23PlBzkXCPIPFUK2s2t0',
     benefits: [
       { icon: 'business', title: 'Trade Accounts', description: 'Set up a trade account for regular collections with simplified invoicing. Ideal for builders and contractors working across multiple sites.' },
@@ -98,8 +98,8 @@ export const services: Record<string, ServiceData> = {
   'rubbish-clearance': {
     slug: 'rubbish-clearance',
     title: 'Rubbish Clearance',
-    metaTitle: 'Rubbish Clearance Long Eaton | House & Garden Clearance | No VAT',
-    metaDescription: 'Professional rubbish clearance in Long Eaton. We handle house clearances, garden clearances & general waste removal. Full labour included, no VAT. Get a free quote.',
+    metaTitle: 'Rubbish Clearance Herne Bay | House & Garden Clearance | No VAT',
+    metaDescription: 'Professional rubbish clearance in Herne Bay. We handle house clearances, garden clearances & general waste removal. Full labour included, no VAT. Get a free quote.',
     heroTag: 'Full Clearance Service',
     heroHeading: 'Rubbish Clearance.',
     heroHighlight: 'We Do The Lifting.',

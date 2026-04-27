@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://longeatonskips.co.uk/sitemap.xml
+Sitemap: https://hernebayskips.co.uk/sitemap.xml

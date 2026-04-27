@@ -43,8 +43,8 @@ const faqs = [
 
 export default function Home() {
   usePageMeta(
-    'Skip Hire Long Eaton | No VAT | From £326 | Long Eaton Skips',
-    'Affordable skip hire in Long Eaton with NO VAT. 5, 8 & 12 yard skips from £326 inc. delivery. Family-run, reliable service covering Long Eaton, Sandiacre, Breaston & surrounding areas.'
+    'Skip Hire Herne Bay | No VAT | From £326 | Herne Bay Skips',
+    'Affordable skip hire in Herne Bay with NO VAT. 5, 8 & 12 yard skips from £326 inc. delivery. Family-run, reliable service covering Herne Bay, Whitstable, Canterbury & surrounding areas.'
   );
 
   return (
@@ -55,7 +55,7 @@ export default function Home() {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container rounded-full text-on-secondary-container font-bold text-xs tracking-widest uppercase">
               <Icon name="verified_user" className="text-base" />
-              Long Eaton's Trusted Choice
+              Herne Bay's Trusted Choice
             </div>
             <h1 className="text-5xl md:text-7xl font-extrabold text-on-surface tracking-tighter leading-[0.95]">
               Professional Skip Hire.{' '}
@@ -66,7 +66,7 @@ export default function Home() {
               and local expertise you can rely on.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <a onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform">
+              <a onClick={trackBookingClick} href="https://zipskips.co.uk/?location=herne-bay" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-xl active:scale-95 transition-transform">
                 Book Online
               </a>
               <a href="tel:07782222906" className="px-8 py-4 bg-secondary-container text-on-secondary-container rounded-full font-bold text-lg active:scale-95 transition-transform flex items-center gap-2">
@@ -92,7 +92,7 @@ export default function Home() {
                 NO VAT
               </p>
               <p className="text-on-surface-variant text-sm font-medium">
-                Save <span className="font-bold text-primary">20%</span> on all domestic hires within the Long Eaton area.
+                Save <span className="font-bold text-primary">20%</span> on all domestic hires within the Herne Bay area.
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function Home() {
                   </span>
                 </p>
                 <a
-                  onClick={trackBookingClick} href="http://zipskips.co.uk/?location=long-eaton"
+                  onClick={trackBookingClick} href="https://zipskips.co.uk/?location=herne-bay"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`block w-full py-3 font-bold rounded-full transition-colors text-center ${
@@ -229,7 +229,7 @@ export default function Home() {
                 </h3>
                 <p className="text-primary-fixed leading-relaxed text-lg">
                   Since 1988, we've been the silent partner in thousands of home
-                  improvements across Long Eaton. We're more than just waste
+                  improvements across Herne Bay. We're more than just waste
                   removal; we're your local neighbor ensuring your community
                   stays clean and vibrant.
                 </p>
